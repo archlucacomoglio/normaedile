@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>NormaEdile — Normative edilizie per architetti</title>
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+          background: #f8f9fa; color: #1a1a1a; }
+  .header { background: #fff; border-bottom: 1px solid #e5e7eb;
+             padding: 1rem 2rem; position: sticky; top: 0; z-index: 100; }
+  .header-inner { max-width: 900px; margin: 0 auto;
+                   display: flex; align-items: center; gap: 1rem; }
+  .logo { font-size: 20px; font-weight: 600; color: #1a56db; white-space: nowrap; }
+  .logo span { font-weight: 400; color: #6b7280; font-size: 14px; }
+  .search-wrap { flex: 1; }
+  .search-wrap input { width: 100%; padding: 8px 14px; border: 1px solid #d1d5db;
+                        border-radius: 8px; font-size: 15px; outline: none; }
+  .search-wrap input:focus { border-color: #1a56db; }
+  .main { max-width: 900px; margin: 0 auto; padding: 1.5rem 1rem; }
+  .stats { display: grid; grid-template-columns: repeat(4,1fr);
+            gap: 12px; margin-bottom: 1.5rem; }
+  .stat { background: #fff; border: 1px solid #e5e7eb; border-radius: 10px;
+           padding: 1rem; text-align: center; }
+  .stat-n { font-size: 26px; font-weight: 600; color: #1a56db; }
+  .stat-l { font-size: 12px; color: #6b7280; margin-top: 2px; }
+  .chips { display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 1.25rem; }
+  .chip { padding: 5px 14px; border-radius: 999px; border: 1px solid #d1d5db;
+           background: #fff; font-size: 13px; color: #374151; cursor: pointer; }
+  .chip:hover { background: #f3f4f6; }
+  .chip.on { background: #1a56db; color: #fff; border-color: #1a56db; }
+  .lbl { font-size: 12px; color: #9ca3af; text-transform: uppercase;
+          letter-spacing: .05em; margin-bottom: .75rem; }
+  .cards { display: flex; flex-direction: column; gap: 10px; }
+  .card { background: #fff; border: 1px solid #e5e7eb; border-radius: 12px;
+           padding: 1rem 1.25rem; }
+  .card:hover { border-color: #93c5fd; }
+  .card-top { display: flex; justify-content: space-between;
+               align-items: flex-start; gap: 12px; margin-bottom: 6px; }
+  .card-title { font-size: 15px; font-weight: 600; line-height: 1.4; flex: 1; }
+  .badge { font-size: 11px; padding: 3px 10px; border-radius: 6px;
+            white-space: nowrap; flex-shrink: 0; }
+  .b-blue { background: #dbeafe; color: #1e40af; }
+  .b-green { background: #dcfce7; color: #166534; }
+  .b-amber { background: #fef3c7; color: #92400e; }
+  .b-purple { background: #ede9fe; color: #5b21b6; }
+  .b-red { background: #fee2e2; color: #991b1b; }
+  .meta { display: flex; flex-wrap: wrap; gap: 10px; font-size: 12px;
+           color: #6b7280; margin-bottom: 6px; }
+  .dot { display: inline-block; width: 7px; height: 7px; border-radius: 50%;
+          margin-right: 4px; vertical-align: middle; }
+  .sintesi { font-size: 13px; color: #374151; line-height: 1.6; }
+  .tags { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 10px; }
+  .tag { font-size: 11px; padding: 2px 8px; border-radius: 6px;
+          border: 1px solid #e5e7eb; color: #6b7280; }
+  .tag-norm { color: #1e40af; border-color: #bfdbfe; background: #eff6ff; }
+  .riv-alta { color: #dc2626; }
+  .riv-media { color: #d97706; }
+  .riv-bassa { color: #9ca3af; }
+  .empty { text-align: center; padding: 3rem; color: #9ca3af; }
+  .footer { text-align: center; padding: 2rem; font-size: 12px; color: #9ca3af;
+             border-top: 1px solid #e5e7eb; margin-top: 2rem; }
+  @media(max-width:600px){
+    .stats{ grid-template-columns: repeat(2,1fr); }
+    .header-inner{ flex-direction: column; gap: .5rem; }
+  }
+</style>
+</head>
+<body>
+
+<div class="header">
+  <div class="header-inner">
+    <div class="logo">🏛 NormaEdile <span>per architetti</span></div>
+    <div class="search-wrap">
+      <input type="text" id="src" placeholder="Cerca normativa, bonus, decreto, argomento..." oninput="filtra()">
+    </div>
+  </div>
+</div>
+
+<div class="main">
+
+  <div class="stats">
+    <div class="stat"><div class="stat-n">2</div><div class="stat-l">Articoli in archivio</div></div>
+    <div class="stat"><div class="stat-n">1</div><div class="stat-l">Alta rilevanza</div></div>
+    <div class="stat"><div class="stat-n">1</div><div class="stat-l">Fonti attive</div></div>
+    <div class="stat"><div class="stat-n">22/06/2026</div><div class="stat-l">Ultimo aggiornamento</div></div>
+  </div>
+
+  <div class="chips">
+    <span class="chip on" onclick="cat(this,'tutti')">Tutti</span>
+    <span class="chip" onclick="cat(this,'bonus')">Bonus fiscali</span>
+    <span class="chip" onclick="cat(this,'piano-casa')">Piano Casa</span>
+    <span class="chip" onclick="cat(this,'pnrr')">PNRR</span>
+    <span class="chip" onclick="cat(this,'urbanistica')">Urbanistica</span>
+    <span class="chip" onclick="cat(this,'normativa')">Normative</span>
+    <span class="chip" onclick="cat(this,'appalti')">Appalti</span>
+    <span class="chip" onclick="cat(this,'professione')">Professione</span>
+    <span class="chip" onclick="cat(this,'alta')">🔴 Alta rilevanza</span>
+  </div>
+
+  <div class="lbl" id="lbl">Tutti gli articoli</div>
+  <div class="cards" id="cards"></div>
+
+</div>
+
+<div class="footer">
+  NormaEdile — Normative edilizie aggiornate per architetti e NON<br>
+  Aggiornato automaticamente tramite analisi AI · Ultimo aggiornamento: 22/06/2026
+</div>
+
+<script>
+const DATA = [{"titolo": "Milano-Cortina, l'inchiesta arriva al Mit: indagata la dirigente Pellegrini", "fonte": "Il Sole 24 Ore", "data": "12 Giu 2026", "pagina": "p. 15", "categoria": "appalti", "badge": "Appalti Olimpici", "rilevanza": "alta", "sintesi": "La procura di Belluno indaga la dirigente del MIT Elisabetta Pellegrini per l'appalto della cabinovia Apollonio-Socrepes a Cortina, opera olimpica mai entrata in funzione. Al centro la procedura negoziata affidata all'ATI Graffer senza rispettare i termini, con sospetti di accordi collusivi. Indagato anche il commissario straordinario Simico Massimo Fabio Saldini.", "normative": [], "tags": ["appalti pubblici", "opere olimpiche", "procedura negoziata", "Milano-Cortina 2026", "indagine penale"], "id": "20260622162951_0", "file_origine": "Il Sole 24 Ore 12 Giugno 2026.pdf", "data_analisi": "22/06/2026 16:29"}, {"titolo": "Comuni montani, scontro tra sindaci e Governo sul nuovo elenco", "fonte": "Il Sole 24 Ore", "data": "12 Giu 2026", "pagina": "p. 15", "categoria": "normativa", "badge": "Normativa Territoriale", "rilevanza": "media", "sintesi": "Il Governo ha predisposto un Dpcm con il nuovo elenco dei Comuni montani in attuazione della legge sulla montagna (L. 131/2025). Escono 616 Comuni ed entrano 298, con saldo negativo di 318 enti. I sindaci chiedono la sospensione dell'iter alla Conferenza Unificata, ma il ministro Calderoli respinge la richiesta.", "normative": ["L. 131/2025"], "tags": ["comuni montani", "classificazione territoriale", "DPCM", "Conferenza Unificata", "legge montagna"], "id": "20260622162951_1", "file_origine": "Il Sole 24 Ore 12 Giugno 2026.pdf", "data_analisi": "22/06/2026 16:29"}];
+
+const BADGE_CLASS = {
+  "bonus":"b-red", "piano-casa":"b-blue", "pnrr":"b-green",
+  "urbanistica":"b-amber", "normativa":"b-purple",
+  "appalti":"b-amber", "professione":"b-purple"
+};
+
+const FONTE_COLOR = {
+  "Il Sole 24 Ore":"#1a56db",
+  "Gazzetta Ufficiale":"#16a34a",
+  "Normativa Regionale":"#d97706"
+};
+
+let filtCat = "tutti", filtTxt = "";
+
+function cat(el, v) {
+  document.querySelectorAll('.chip').forEach(c => c.classList.remove('on'));
+  el.classList.add('on');
+  filtCat = v;
+  filtra();
+}
+
+function filtra() {
+  filtTxt = document.getElementById('src').value.toLowerCase();
+  const res = DATA.filter(d => {
+    const mc = filtCat === 'tutti' ? true
+             : filtCat === 'alta' ? d.rilevanza === 'alta'
+             : d.categoria === filtCat;
+    const mt = filtTxt === '' || [d.titolo, d.sintesi,
+      ...(d.normative||[]), ...(d.tags||[])
+    ].some(s => s && s.toLowerCase().includes(filtTxt));
+    return mc && mt;
+  });
+  render(res);
+  document.getElementById('lbl').textContent =
+    res.length === DATA.length ? `Tutti gli articoli (${DATA.length})`
+    : `${res.length} risultat${res.length===1?'o':'i'} trovati`;
+}
+
+function render(lista) {
+  const el = document.getElementById('cards');
+  if (!lista.length) {
+    el.innerHTML = '<div class="empty">Nessun articolo trovato.<br>Prova con un termine diverso.</div>';
+    return;
+  }
+  el.innerHTML = lista.map(d => {
+    const bc = BADGE_CLASS[d.categoria] || 'b-blue';
+    const fc = FONTE_COLOR[d.fonte] || '#1a56db';
+    const rc = d.rilevanza==='alta' ? 'riv-alta' : d.rilevanza==='media' ? 'riv-media' : 'riv-bassa';
+    const rlabel = d.rilevanza==='alta' ? '● Alta' : d.rilevanza==='media' ? '◐ Media' : '○ Bassa';
+    const norms = (d.normative||[]).map(n=>`<span class="tag tag-norm">${n}</span>`).join('');
+    const tags = (d.tags||[]).map(t=>`<span class="tag">${t}</span>`).join('');
+    return `<div class="card">
+      <div class="card-top">
+        <div class="card-title">${d.titolo}</div>
+        <span class="badge ${bc}">${d.badge||d.categoria}</span>
+      </div>
+      <div class="meta">
+        <span><span class="dot" style="background:${fc}"></span>${d.fonte||''}</span>
+        <span>📅 ${d.data||''}</span>
+        <span>📄 ${d.pagina||''}</span>
+        <span class="${rc}" style="margin-left:auto">${rlabel} rilevanza</span>
+      </div>
+      <div class="sintesi">${d.sintesi||''}</div>
+      <div class="tags">${norms}${tags}</div>
+    </div>`;
+  }).join('');
+}
+
+filtra();
+</script>
+</body>
+</html>
