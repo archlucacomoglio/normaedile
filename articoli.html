@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>NormaEdile — Archivio articoli</title>
+<style>
+  :root {
+    --verde-scuro: #14532d;
+    --verde: #15803d;
+    --verde-chiaro: #16a34a;
+    --verde-pastello: #dcfce7;
+    --verde-bordo: #86efac;
+    --grigio-testo: #374151;
+    --grigio-chiaro: #6b7280;
+    --bg: #f5f6f4;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: 'Georgia', 'Times New Roman', serif;
+          background: var(--bg); color: #1a1a1a; }
+
+  .header { background: var(--verde-scuro); padding: 0; }
+  .header-top { max-width: 960px; margin: 0 auto; padding: 1.5rem 1.5rem 1rem;
+                 display: flex; align-items: center; justify-content: space-between; }
+  .logo { font-size: 26px; font-weight: 700; color: #fff; letter-spacing: -0.5px;
+           font-family: 'Georgia', serif; }
+  .logo span { font-weight: 400; color: var(--verde-bordo); font-size: 14px;
+                font-family: -apple-system, sans-serif; display: block;
+                margin-top: 2px; letter-spacing: 0.5px; }
+  .back-link { color: var(--verde-bordo); font-size: 13px; text-decoration: none;
+                font-family: -apple-system, sans-serif; font-weight: 600; }
+  .back-link:hover { color: #fff; }
+
+  .search-band { background: var(--verde); padding: 1rem 1.5rem; }
+  .search-wrap { max-width: 960px; margin: 0 auto; }
+  .search-wrap input { width: 100%; padding: 12px 18px; border: none;
+                        border-radius: 8px; font-size: 15px; outline: none;
+                        font-family: -apple-system, sans-serif;
+                        box-shadow: 0 2px 8px rgba(0,0,0,0.15); }
+  .search-wrap input::placeholder { color: #9ca3af; }
+
+  .main { max-width: 960px; margin: 0 auto; padding: 1.75rem 1.25rem; }
+
+  .stats { display: grid; grid-template-columns: repeat(4,1fr);
+            gap: 14px; margin-bottom: 1.75rem; }
+  .stat { background: #fff; border: 1px solid #e0e3de; border-radius: 10px;
+           padding: 1.1rem; text-align: center;
+           border-top: 3px solid var(--verde); }
+  .stat-n { font-size: 28px; font-weight: 700; color: var(--verde-scuro);
+             font-family: -apple-system, sans-serif; }
+  .stat-l { font-size: 11px; color: var(--grigio-chiaro); margin-top: 4px;
+             text-transform: uppercase; letter-spacing: 0.05em;
+             font-family: -apple-system, sans-serif; }
+
+  .chips { display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 1.5rem; }
+  .chip { padding: 6px 16px; border-radius: 999px; border: 1.5px solid var(--verde);
+           background: #fff; font-size: 13px; color: var(--verde-scuro);
+           cursor: pointer; font-family: -apple-system, sans-serif;
+           font-weight: 500; transition: all .15s; }
+  .chip:hover { background: var(--verde-pastello); }
+  .chip.on { background: var(--verde); color: #fff; }
+
+  .lbl { font-size: 13px; color: var(--grigio-chiaro); margin-bottom: .9rem;
+          font-family: -apple-system, sans-serif; font-weight: 600;
+          text-transform: uppercase; letter-spacing: 0.04em;
+          border-bottom: 2px solid var(--verde-pastello); padding-bottom: 8px; }
+
+  .cards { display: flex; flex-direction: column; gap: 14px; }
+  .card { background: #fff; border: 1px solid #e0e3de; border-radius: 12px;
+           padding: 1.4rem 1.6rem; border-left: 4px solid var(--verde);
+           transition: box-shadow .15s; }
+  .card:hover { box-shadow: 0 4px 16px rgba(20,83,45,0.08); }
+
+  .card-top { display: flex; justify-content: space-between;
+               align-items: flex-start; gap: 14px; margin-bottom: 10px; }
+  .card-title { font-size: 18px; font-weight: 700; line-height: 1.4; flex: 1;
+                 color: #1a1a1a; }
+
+  .badge { font-size: 11px; padding: 4px 12px; border-radius: 6px;
+            white-space: nowrap; flex-shrink: 0; font-weight: 600;
+            font-family: -apple-system, sans-serif;
+            text-transform: uppercase; letter-spacing: 0.03em;
+            background: var(--verde-pastello); color: var(--verde-scuro); }
+
+  .meta { display: flex; flex-wrap: wrap; gap: 14px; font-size: 13px;
+           color: var(--grigio-testo); margin-bottom: 12px;
+           font-family: -apple-system, sans-serif;
+           padding-bottom: 10px; border-bottom: 1px solid #f0f1ee; }
+  .meta b { color: #1a1a1a; font-weight: 700; }
+
+  .sintesi { font-size: 15.5px; color: var(--grigio-testo); line-height: 1.75;
+              text-align: justify; }
+
+  .tags { display: flex; flex-wrap: wrap; gap: 7px; margin-top: 14px; }
+  .tag { font-size: 11.5px; padding: 3px 11px; border-radius: 6px;
+          border: 1px solid #e0e3de; color: var(--grigio-chiaro);
+          font-family: -apple-system, sans-serif; }
+  .tag-norm { color: var(--verde-scuro); border-color: var(--verde-bordo);
+               background: var(--verde-pastello); font-weight: 600; }
+
+  .riv-alta { color: #b91c1c; font-weight: 700; }
+  .riv-media { color: #b45309; font-weight: 600; }
+  .riv-bassa { color: var(--grigio-chiaro); }
+
+  .empty { text-align: center; padding: 3rem; color: var(--grigio-chiaro);
+            font-family: -apple-system, sans-serif; }
+
+  .footer { text-align: center; padding: 2rem; font-size: 12px;
+             color: var(--grigio-chiaro); border-top: 1px solid #e0e3de;
+             margin-top: 2.5rem; font-family: -apple-system, sans-serif; }
+
+  @media(max-width:600px){
+    .stats{ grid-template-columns: repeat(2,1fr); }
+    .card-title{ font-size: 16px; }
+  }
+</style>
+</head>
+<body>
+
+<div class="header">
+  <div class="header-top">
+    <div class="logo">🏛 NormaEdile
+      <span>Normative edilizie per architetti</span>
+    </div>
+    <a class="back-link" href="index.html">← Torna alla home</a>
+  </div>
+  <div class="search-band">
+    <div class="search-wrap">
+      <input type="text" id="src" placeholder="Cerca normativa, bonus, decreto, argomento..." oninput="filtra()">
+    </div>
+  </div>
+</div>
+
+<div class="main">
+
+  <div class="stats">
+    <div class="stat"><div class="stat-n">15</div><div class="stat-l">Articoli in archivio</div></div>
+    <div class="stat"><div class="stat-n">6</div><div class="stat-l">Alta rilevanza</div></div>
+    <div class="stat"><div class="stat-n">1</div><div class="stat-l">Fonti attive</div></div>
+    <div class="stat"><div class="stat-n">23/06/2026</div><div class="stat-l">Ultimo aggiornamento</div></div>
+  </div>
+
+  <div class="chips">
+    <span class="chip on" onclick="cat(this,'tutti')">Tutti</span>
+    <span class="chip" onclick="cat(this,'bonus')">Bonus fiscali</span>
+    <span class="chip" onclick="cat(this,'piano-casa')">Piano Casa</span>
+    <span class="chip" onclick="cat(this,'pnrr')">PNRR</span>
+    <span class="chip" onclick="cat(this,'urbanistica')">Urbanistica</span>
+    <span class="chip" onclick="cat(this,'normativa')">Normative</span>
+    <span class="chip" onclick="cat(this,'appalti')">Appalti</span>
+    <span class="chip" onclick="cat(this,'professione')">Professione</span>
+    <span class="chip" onclick="cat(this,'alta')">🔴 Alta rilevanza</span>
+  </div>
+
+  <div class="lbl" id="lbl">Tutti gli articoli</div>
+  <div class="cards" id="cards"></div>
+
+</div>
+
+<div class="footer">
+  NormaEdile — Normative edilizie per architetti<br>
+  Aggiornato automaticamente tramite analisi AI · Ultimo aggiornamento: 23/06/2026
+</div>
+
+<script>
+const DATA = [{"titolo": "Roma, sprint per lo stadio: dimezzati i tempi dell'iter", "fonte": "Il Sole 24 Ore", "data": "16 Giu 2026", "pagina": "p. 14", "categoria": "normativa", "badge": "Iter Autorizzativo Stadi", "rilevanza": "alta", "sintesi": "Il commissario straordinario Massimo Sessa, incaricato dal Governo per accelerare gli interventi negli stadi in vista di Euro2032, ha emesso la prima ordinanza che definisce una procedura accelerata per il rilascio dell'autorizzazione unica del nuovo impianto di Roma a Pietralata, comprensiva anche della Valutazione di impatto ambientale. La durata massima dell'iter sarà di 90 giorni, contro i tempi ordinari previsti dall'articolo 27-bis del Dlgs 152/2006 che possono superare i sei mesi e arrivare a nove in caso di richieste di integrazioni. L'ordinanza riduce o accorpa diverse fasi procedimentali (cinque giorni per la verifica di completezza della documentazione, altri cinque per eventuali integrazioni, trenta giorni per osservazioni del pubblico e verifiche tecnico-contenutistiche, un ulteriore termine di trenta giorni per le integrazioni documentali, seduta decisoria della Conferenza di servizi entro dieci giorni). Il ministro dello Sport Andrea Abodi ha garantito il rispetto delle valutazioni ambientali nonostante le procedure più snelle. Il progetto di Pietralata, insieme alla riqualificazione del 'Renzo Barbera' di Palermo, rientra tra le priorità del dossier inviato all'Uefa per individuare gli stadi italiani che ospiteranno gli Europei 2032. Per i professionisti tecnici coinvolti in progetti di grandi opere sportive, questo modello procedurale accelerato potrebbe costituire un precedente applicabile ad altri interventi infrastrutturali strategici.", "normative": ["Dlgs 152/2006 art. 27-bis", "Dpcm fine maggio 2026", "Ordinanza commissariale Sessa"], "tags": ["appalti pubblici", "VIA", "stadi", "Euro2032", "autorizzazione unica", "Conferenza di servizi"]}, {"titolo": "Gemmato: Case di comunità, decreto resta strumento se manca intesa", "fonte": "Il Sole 24 Ore", "data": "16 Giu 2026", "pagina": "p. 14", "categoria": "pnrr", "badge": "PNRR Case di Comunità", "rilevanza": "media", "sintesi": "Il sottosegretario alla Salute Marcello Gemmato ha dichiarato che il Governo è pronto a utilizzare un decreto come strumento alternativo qualora non si raggiunga un'intesa con la categoria dei medici di medicina generale entro il 30 giugno, scadenza fissata dal PNRR come target minimo per l'apertura e il funzionamento di almeno 1.038 Case di comunità in tutta Italia. Le Case di comunità sono i maxi ambulatori finanziati dal PNRR dove i cittadini potranno trovare visite specialistiche, primi esami diagnostici e attività di prevenzione, e la loro operatività piena richiede anche l'assunzione di personale medico dipendente, opzione contestata dai sindacati come la Fimmg, pronta a scioperare per tutelare l'attuale convenzione con il Ssn. Il rischio concreto è che molte delle nuove strutture, già edificate o in fase di completamento con i fondi del PNRR, restino prive di personale medico e quindi inutilizzabili nei tempi previsti. Per i tecnici e gli enti coinvolti nella realizzazione e nel collaudo di queste infrastrutture sanitarie finanziate dal PNRR, la vicenda segnala il rischio di un disallineamento tra opere completate e relativa messa in funzione, con possibili ricadute sulla rendicontazione dei target europei legati alla Missione Salute del Piano.", "normative": ["PNRR Missione Salute - Case di comunità"], "tags": ["PNRR", "Case di comunità", "edilizia sanitaria", "scadenze PNRR"]}, {"titolo": "Liti condominiali: dal 2027 il passaggio ai giudici di pace", "fonte": "Il Sole 24 Ore", "data": "16 Giu 2026", "pagina": "p. 38", "categoria": "normativa", "badge": "Condominio", "rilevanza": "media", "sintesi": "Il decreto legge 12 giugno 2026 n. 100, all'articolo 5, rinvia per la sesta volta il passaggio delle competenze sull'intera materia condominiale dai Tribunali ai giudici di pace, posticipando la riforma al 31 ottobre 2027 rispetto alla data originaria del 31 ottobre 2021 prevista dall'articolo 27 del Dlgs 116/2017 sulla riforma organica della magistratura onoraria. Il principale ostacolo resta la grave carenza di organico degli uffici dei giudici di pace, che secondo l'Organismo congressuale forense (Ocf) non sono ancora in condizione di gestire il trasferimento in blocco del contenzioso condominiale; l'Ocf chiede anzi l'abrogazione definitiva della norma. Secondo i dati del ministero della Giustizia al 31 dicembre 2025, le procedure di mediazione in materia condominiale sono state 23.763, pari al 14,5% del totale, dato che testimonia il peso rilevante di questo contenzioso (la mediazione resta obbligatoria per le controversie su violazione o applicazione delle norme condominiali). Per amministratori di condominio, tecnici e professionisti che gestiscono assemblee e contenziosi condominiali, il rinvio mantiene inalterata la competenza del Tribunale ordinario fino al 2027, evitando per ora l'incertezza procedurale legata al cambio di giudice competente.", "normative": ["Dl 12 giugno 2026 n. 100, art. 5", "Dlgs 116/2017 art. 27"], "tags": ["condominio", "normativa locale", "mediazione", "contenzioso condominiale", "giudici di pace"]}, {"titolo": "Cat nat, bene le polizze. Faro sui valori assicurati", "fonte": "Il Sole 24 Ore", "data": "16 Giu 2026", "pagina": "p. 29", "categoria": "normativa", "badge": "Assicurazione Catastrofale Immobili", "rilevanza": "media", "sintesi": "La seconda indagine dell'Ivass sulle coperture assicurative contro i rischi catastrofali, introdotte dall'obbligo assicurativo per le imprese, dà un quadro nel complesso positivo: le polizze analizzate rispettano i requisiti della normativa e nella maggior parte dei casi ampliano le tutele rispetto al minimo richiesto, includendo oltre alla copertura per terremoti, alluvioni, inondazioni, esondazioni e frane anche garanzie per danni da incendio o esplosione conseguenti alla calamità, spese di salvataggio, demolizione e sgombero, oneri per la ricostruzione e onorari di periti e consulenti. Resta tuttavia limitata la diffusione delle coperture, con adesioni intorno al 15% delle imprese interessate: l'Autorità chiede un passo avanti soprattutto sulla determinazione delle somme assicurate, segnalando che in molti casi il valore dei beni (quindi anche degli immobili strumentali) viene autodichiarato dall'assicurato e verificato dalla compagnia solo al momento del sinistro, generando il rischio di contestazioni in fase di liquidazione del danno. L'Ivass chiede che tale verifica avvenga già in fase di sottoscrizione della polizza, con importi concordati e validati preventivamente. Per architetti e tecnici che si occupano di perizie e valutazioni patrimoniali su edifici strumentali, il tema della corretta determinazione dei valori assicurati ai fini cat-nat diventa un ambito di consulenza sempre più richiesto dalle imprese committenti.", "normative": ["Obbligo assicurativo cat-nat per le imprese", "Rapporto Ivass 2026"], "tags": ["assicurazione immobili", "rischio catastrofale", "valutazione immobiliare", "Ivass", "ricostruzione"]}, {"titolo": "Piccoli Comuni, solo uno su cinque offre tutti i servizi di base", "fonte": "Il Sole 24 Ore", "data": "15 Giu 2026", "pagina": "p. 2-3", "categoria": "pnrr", "badge": "PNRR Borghi", "rilevanza": "media", "sintesi": "L'inchiesta del Sole 24 Ore del Lunedì sui piccoli Comuni italiani (sotto i 5.000 abitanti) evidenzia che solo il 19,6% di questi enti dispone di tutti i servizi di base (farmacie, sportelli bancari, uffici postali, distributori di carburante), mentre il 3,2% ne è del tutto privo. Tra gli strumenti statali per contrastare lo spopolamento delle aree interne spicca il Piano Borghi, finanziato dal PNRR con una dotazione di 1,02 miliardi di euro per la rigenerazione culturale dei centri storici minori: 315 Comuni hanno già avviato i progetti finanziati, anche se gli effetti concreti si vedranno solo nei prossimi anni. Si affianca la Strategia nazionale per le aree interne (Snai), sostenuta anche da circa 825 milioni di fondi PNRR (Missione 5), che mostra però forti ritardi attuativi: al 30 giugno 2026 risultano spesi solo 706,5 milioni dei 1,2 miliardi stanziati per la programmazione 2014-2020. Per architetti e tecnici attivi su progetti di recupero del patrimonio edilizio nei piccoli centri, questi fondi rappresentano un'opportunità concreta nei prossimi bandi, pur scontando tempi di erogazione e gestione amministrativa complessi.", "normative": ["L. 6 ottobre 2017 n. 158", "PNRR Missione 5", "Piano Borghi"], "tags": ["PNRR", "aree interne", "rigenerazione", "piccoli Comuni", "Snai"]}, {"titolo": "Poste come perno dei presidi di prossimità - Progetto Polis", "fonte": "Il Sole 24 Ore", "data": "15 Giu 2026", "pagina": "p. 2", "categoria": "pnrr", "badge": "Rigenerazione PNRR", "rilevanza": "alta", "sintesi": "Il Progetto Polis di Poste Italiane, finanziato con 1,2 miliardi di euro (di cui 800 milioni dal Piano complementare al PNRR e oltre 400 milioni a carico dell'azienda), trasforma 6.933 uffici postali nei Comuni sotto i 15mila abitanti in infrastrutture polivalenti di prossimità: punti di accesso alla Pa, colonnine di ricarica elettrica (oltre 9mila punti già installati), spazi di coworking (250 siti, 170 ultimati) e locker logistici. L'intervento comporta una rigenerazione edilizia degli immobili postali con micro-interventi di rigenerazione urbana in mille sedi (panchine, rastrelliere, gazebo), realizzata anche con la collaborazione di Carlo Ratti. Gli interventi dello Sportello Unico avviati sono 6.287, con 5.432 uffici già completati e una ricaduta stimata di 1.061 milioni sul Pil e 18.600 posti di lavoro. Per i tecnici del settore, il progetto è un caso rilevante di rigenerazione del patrimonio immobiliare pubblico su scala nazionale, con appalti gestiti tramite circa 400 imprese attraverso gare nazionali articolate in lotti locali per favorire l'accesso delle Pmi; la concomitanza con Superbonus e PNRR ha generato tensioni sul mercato delle costruzioni e sulla disponibilità di manodopera.", "normative": ["PNRR Piano complementare", "Progetto Polis"], "tags": ["rigenerazione urbana", "PNRR", "appalti pubblici", "edilizia pubblica", "Poste Italiane"]}, {"titolo": "Dalla casa al bonus bebè: le strategie dei territori contro lo spopolamento", "fonte": "Il Sole 24 Ore", "data": "15 Giu 2026", "pagina": "p. 3", "categoria": "bonus", "badge": "Bonus Regionali Casa", "rilevanza": "alta", "sintesi": "Le Regioni italiane stanno moltiplicando incentivi fiscali e contributi per contrastare lo spopolamento, con misure specifiche per l'acquisto e la ristrutturazione di immobili nei piccoli centri. Il Trentino ha istituito un fondo da 10 milioni di euro per il recupero del patrimonio edilizio nei 32 Comuni più a rischio abbandono, con contributi fino a 100mila euro per acquisto e ristrutturazione. La Regione Sardegna riconosce un credito d'imposta del 50% della spesa (fino a 15mila euro) per chi acquista o ristruttura la prima casa in un piccolo centro, oltre a un contributo a fondo perduto della stessa entità per chi apre una nuova attività; previsto anche un bonus bebè da 600 euro mensili per il primo figlio, vincolato a 5 anni di residenza. La Lombardia ha rinnovato per il 2026 gli incentivi per l'apertura di negozi di alimentari nei piccoli Comuni fino a 3mila abitanti. Per gli architetti che operano su commesse di recupero abitativo in aree interne, questi bandi regionali costituiscono una fonte di finanziamento aggiuntiva per i clienti privati, da monitorare insieme alle scadenze e ai requisiti di residenza richiesti.", "normative": ["Misure regionali Trentino, Sardegna, Lombardia 2026"], "tags": ["bonus regionali", "recupero edilizio", "aree interne", "incentivi casa", "spopolamento"]}, {"titolo": "Il lago Maggiore sfida Como con la spinta dei capitali esteri", "fonte": "Il Sole 24 Ore", "data": "15 Giu 2026", "pagina": "p. 16", "categoria": "urbanistica", "badge": "Mercato Immobiliare", "rilevanza": "media", "sintesi": "Il mercato immobiliare del lago Maggiore registra una forte crescita dei valori (fino al +3% nel 2025, +10/+20% negli ultimi anni per gli asset di pregio), spinta da capitali stranieri (60% degli acquirenti, soprattutto Usa, Regno Unito, Svizzera) che si spostano da Como e Milano verso destinazioni meno sature. Gli immobili di nuova costruzione raggiungono i 3.500 euro al mq, mentre gli asset prime fronte lago toccano 8.000-10.000 euro al mq. Tra le operazioni più rilevanti in fase di sviluppo spicca un maxi progetto di rigenerazione a Luino, guidato da Gran Luino con investitori tedeschi e americani, che punta a trasformare l'ex area industriale Ratti in un polo turistico-residenziale da oltre 300 milioni di euro di investimenti privati, con un hotel 5 stelle, un villaggio turistico sostenibile in legno, circa 1.500 posti letto e il recupero di aree pubbliche e collegamenti via acqua. Per i professionisti tecnici, l'area rappresenta un bacino crescente di commesse legate al recupero di ville storiche, dimore vincolate dalle Belle Arti (come Villa Poss a Biganzolo) e nuove strutture ricettive di fascia alta.", "normative": [], "tags": ["mercato immobiliare", "rigenerazione urbana", "turismo", "investimenti stranieri", "Lago Maggiore"]}, {"titolo": "Montagna, crescono i prezzi delle seconde case di fascia alta", "fonte": "Il Sole 24 Ore", "data": "15 Giu 2026", "pagina": "p. 18", "categoria": "urbanistica", "badge": "Mercato Immobiliare Montagna", "rilevanza": "alta", "sintesi": "Il report Ubs sulle Alpi europee segnala che i prezzi delle abitazioni di fascia alta nelle località alpine italiane sono cresciuti in media del 40% rispetto al 2019 (dietro solo alla Svizzera, +45%), con Madonna di Campiglio in testa per crescita annua (+8,9%) e Cortina d'Ampezzo che resta la più cara (12.600 euro al mq). L'aumento dei prezzi sta riducendo l'accessibilità abitativa per i residenti locali: a Madonna di Campiglio e Canazei le seconde case superano l'80% dello stock immobiliare totale. Sul piano normativo, la Provincia autonoma di Bolzano ha varato tra ottobre 2025 e febbraio 2026 le principali misure della 'Riforma Abitare', che introduce vincoli più stringenti sugli alloggi convenzionati e nuove forme di edilizia sociale a canone calmierato per tutelare i residenti; in Trentino il dibattito si concentra invece sul recupero degli immobili sfitti e sulla realizzazione di nuove abitazioni a prezzi accessibili. Per architetti e urbanisti attivi nei territori alpini, queste politiche pubbliche apriranno nuove opportunità professionali legate sia al recupero del patrimonio esistente sia alla progettazione di edilizia sociale convenzionata.", "normative": ["Riforma Abitare (Bolzano, 2025-2026)"], "tags": ["edilizia sociale", "normativa regionale", "mercato immobiliare", "montagna", "case vacanza"]}, {"titolo": "Idealista: tempi di vendita più lunghi per l'offerta in calo", "fonte": "Il Sole 24 Ore", "data": "15 Giu 2026", "pagina": "p. 18", "categoria": "urbanistica", "badge": "Mercato Immobiliare", "rilevanza": "media", "sintesi": "L'osservatorio Idealista sul primo trimestre 2026 rileva una tensione crescente nel mercato immobiliare residenziale italiano: le richieste di acquisto aumentano in tutte le 107 Province monitorate (+22,5% medio), mentre l'offerta disponibile si riduce del 4,9% e il tempo medio di vendita sale a 169 giorni (+6,1%). Secondo l'Ufficio studi di Idealista il problema è strutturale: lo stock disponibile è composto soprattutto da grandi tagli in aree a domanda debole, mentre la richiesta si concentra su bilocali e trilocali in zone ben servite. Le differenze territoriali sono marcate: nel Nord-Ovest la domanda cresce del 27,4% ma l'offerta si contrae del 6,7%; il Sud registra il maggior allungamento dei tempi di vendita (+17,2%). Tra le grandi città, Bologna è la più rapida (50 giorni, -31%), mentre Roma, Napoli, Genova e Palermo mostrano le maggiori difficoltà di conversione della domanda in compravendite concluse. Per i tecnici coinvolti in valutazioni immobiliari, questi dati confermano la necessità di un'attenta lettura della domanda locale per taglio e localizzazione degli immobili.", "normative": [], "tags": ["mercato immobiliare", "compravendite", "domanda abitativa", "offerta residenziale"]}, {"titolo": "Professioni tecniche, pressing per limitare la responsabilità civile", "fonte": "Il Sole 24 Ore", "data": "15 Giu 2026", "pagina": "p. 14", "categoria": "professione", "badge": "Responsabilità Professionale", "rilevanza": "alta", "sintesi": "È stata presentata alla Camera, a prima firma del deputato Andrea de Bertoldi (Lega), una proposta di legge - elaborata con il contributo dei Consigli nazionali degli ingegneri e degli architetti - per riequilibrare la responsabilità civile dei professionisti tecnici (ingegneri, architetti, geometri, periti, geologi). Il testo delimita la responsabilità solidale tra professionista e impresa esecutrice nelle attività di progettazione, direzione lavori, coordinamento sicurezza e collaudo, evitando che il tecnico (o i suoi eredi) resti l'unico soggetto aggredibile quando l'impresa esecutrice sia fallita o cessata; introduce inoltre una prescrizione decennale dell'azione di responsabilità professionale dalla conclusione della prestazione (salvo dolo), limita il coinvolgimento degli eredi ai soli beni ereditati e impone alle imprese esecutrici una polizza assicurativa decennale postuma per danni da rovina dell'opera o gravi difetti costruttivi. Prevista anche un'azione diretta del danneggiato contro la compagnia assicurativa del professionista. Per architetti e ingegneri la riforma, se approvata, ridurrebbe significativamente l'esposizione personale a contenziosi pluriennali legati a opere risalenti nel tempo.", "normative": ["Proposta di legge de Bertoldi (Camera, giugno 2026)"], "tags": ["responsabilità professionale", "architetti", "ingegneri", "assicurazione professionale", "direzione lavori"]}, {"titolo": "Pubblicità, Comuni in testacoda sulla Scia", "fonte": "Il Sole 24 Ore", "data": "15 Giu 2026", "pagina": "p. 29", "categoria": "urbanistica", "badge": "SCIA Comunale", "rilevanza": "media", "sintesi": "Dal 20 febbraio 2026 è in vigore l'articolo 5, comma 2, del decreto PNRR (Dl 19/2026), che sostituisce l'autorizzazione con la Scia per la collocazione di mezzi pubblicitari ai sensi dell'articolo 23 del Codice della strada (resta invece necessaria l'autorizzazione nelle aree vincolate dal punto di vista storico-artistico o paesaggistico). Il contrasto con il Codice della strada, che continua a prevedere l'autorizzazione, sta generando applicazioni disomogenee tra i Comuni: Milano nega l'uso della Scia richiamando l'articolo 19 della legge 241/1990 (esclusione in presenza di piani di settore, come il Piano degli impianti pubblicitari), Ferrara esclude la Scia per il rispetto del proprio Piano generale degli impianti, mentre Torino la consente solo per le insegne di esercizio, sottolineando che resta comunque necessaria la concessione di occupazione del suolo pubblico, atto discrezionale incompatibile con la Scia. Anche il ministero dell'Interno, con circolare del 5 giugno 2026, non ha sciolto i dubbi interpretativi. Per i tecnici che assistono clienti nell'installazione di insegne e cartelloni è quindi indispensabile verificare caso per caso il regolamento comunale vigente prima di procedere con la sola Scia.", "normative": ["Dl 19/2026 art. 5 comma 2", "L. 241/1990 art. 19", "Codice della strada art. 23"], "tags": ["SCIA", "normativa comunale", "PNRR semplificazione", "edilizia commerciale", "pubblicità"]}, {"titolo": "Partite Iva, più sanitari e formatori. Commercio giù (effetto Superbonus sulle costruzioni)", "fonte": "Il Sole 24 Ore", "data": "15 Giu 2026", "pagina": "p. 8", "categoria": "bonus", "badge": "Superbonus effetto edilizia", "rilevanza": "bassa", "sintesi": "L'analisi del Sole 24 Ore sulle nuove partite Iva del primo trimestre 2026 evidenzia come il settore delle costruzioni resti lo sbocco lavorativo più frequente per chi avvia un'attività in proprio dopo essere nato all'estero (19,1% del totale), segno del tipico passaggio da lavoro dipendente a libera professione nel comparto edile. Tuttavia anche in questo settore le nuove aperture sono in calo dopo il picco raggiunto nel 2021-2022, trainato dalle agevolazioni fiscali per il recupero edilizio, in particolare dal Superbonus. Il dato fotografa quindi l'esaurimento dell'effetto-traino della maxi-detrazione sul mercato del lavoro edile e sulla nascita di nuove imprese artigiane e di posa, un elemento di contesto utile per i professionisti tecnici che devono valutare la disponibilità di manodopera qualificata sul mercato per i cantieri privati, anche alla luce della contestuale concomitanza con i cantieri legati al PNRR e al Progetto Polis di Poste Italiane, che hanno assorbito ulteriore manodopera nello stesso periodo.", "normative": ["Superbonus (D.L. 34/2020 e successive modifiche)"], "tags": ["Superbonus", "mercato del lavoro edile", "recupero edilizio", "imprese costruzioni"]}, {"titolo": "Demanio, Terzo settore e Sace: così il Piano casa si apre a nuovi attori", "fonte": "Il Sole 24 Ore", "data": "13 Giu 2026", "pagina": "p. 26", "categoria": "piano-casa", "badge": "Piano Casa", "rilevanza": "alta", "sintesi": "Si allarga il perimetro del Piano Casa attraverso gli emendamenti al decreto-legge 66/2026 all'esame della commissione Ambiente della Camera. L'emendamento a prima firma Ylenja Lucaselli (FdI) istituisce un Fascicolo digitale dell'immobile pubblico gestito dall'Agenzia del Demanio, un sistema unico nazionale per mappare gli immobili pubblici utilizzati o detenuti dalle PA, propedeutico all'attuazione del primo pilastro del Piano dedicato alle case popolari. Altri emendamenti di FdI e Lega estendono l'accesso ai contributi per l'edilizia residenziale pubblica a enti del Terzo settore, cooperative sociali e imprese sociali operanti nell'abitare sociale, promuovendo accordi per il riuso di immobili dismessi destinati a co-housing, senior housing e servizi abitativi integrati; per l'edilizia convenzionata si introduce inoltre l'obbligo di spazi di prossimità per la coesione sociale. Due emendamenti gemelli di Forza Italia e Lega puntano ad attivare la garanzia Sace su finanziamenti bancari per la realizzazione di alloggi e per la copertura degli oneri di urbanizzazione, agevolando l'accesso al credito degli operatori. Il decreto è atteso al voto in commissione la prossima settimana e poi in Aula a Montecitorio. Per architetti e tecnici attivi nell'edilizia sociale e nella rigenerazione urbana, l'ampliamento dei soggetti coinvolti apre nuovi canali di finanziamento e partenariato per il riuso di immobili pubblici dismessi.", "normative": ["D.L. 66/2026"], "tags": ["piano casa", "edilizia residenziale pubblica", "terzo settore", "Sace", "Agenzia del Demanio", "rigenerazione urbana", "co-housing", "senior housing"]}, {"titolo": "Il piano manovra: taglio Irpef e sconti per affitti ai giovani", "fonte": "Il Sole 24 Ore", "data": "13 Giu 2026", "pagina": "p. 6", "categoria": "bonus", "badge": "Affitti Giovani", "rilevanza": "media", "sintesi": "Il viceministro dell'Economia Maurizio Leo, intervistato da Bruno Vespa al Forum in Masseria di Manduria, ha anticipato alcune linee della manovra 2027 in materia di fisco sulla casa. Tra le misure allo studio figura la riduzione dell'aliquota Iva dal 10% al 5% per le locazioni di abitazioni concesse da costruttori titolari di partita Iva, pensata per agevolare i giovani che decidono di andare a vivere da soli e, al contempo, per sostenere il mercato abitativo; il riferimento riguarda in particolare le imprese di costruzione che affittano direttamente unità immobiliari di nuova realizzazione. La misura si affianca a un più ampio intervento sull'Irpef (riduzione dell'aliquota dal 43% al 33% per i redditi tra 50mila e 60mila euro, costo stimato 3 miliardi) da finanziare con il riordino delle tax expenditures, una platea di circa 600 misure tra deduzioni, detrazioni e crediti d'imposta. Leo ha indicato una probabilità 'prudenziale' di realizzazione pari a 7 su 10, condizionata all'andamento del deficit pubblico verificabile da ottobre. Per il settore immobiliare e per i costruttori, l'eventuale taglio dell'Iva sulle locazioni costituirebbe un incentivo fiscale diretto a sostenere la domanda di affitto su immobili di nuova costruzione, con possibili riflessi sul mercato delle locazioni abitative destinate ai giovani; la misura resta allo stadio di proposta, non ancora recepita in un provvedimento normativo definitivo.", "normative": [], "tags": ["locazioni", "Iva agevolata", "giovani", "manovra 2027", "mercato abitativo", "imprese di costruzione"]}];
+
+let filtCat = "tutti", filtTxt = "";
+
+function cat(el, v) {
+  document.querySelectorAll('.chip').forEach(c => c.classList.remove('on'));
+  el.classList.add('on');
+  filtCat = v;
+  filtra();
+}
+
+function filtra() {
+  filtTxt = document.getElementById('src').value.toLowerCase();
+  const res = DATA.filter(d => {
+    const mc = filtCat === 'tutti' ? true
+             : filtCat === 'alta' ? d.rilevanza === 'alta'
+             : d.categoria === filtCat;
+    const mt = filtTxt === '' || [d.titolo, d.sintesi,
+      ...(d.normative||[]), ...(d.tags||[])
+    ].some(s => s && s.toLowerCase().includes(filtTxt));
+    return mc && mt;
+  });
+  render(res);
+  document.getElementById('lbl').textContent =
+    res.length === DATA.length ? `Tutti gli articoli (${DATA.length})`
+    : `${res.length} risultat${res.length===1?'o':'i'} trovati`;
+}
+
+function render(lista) {
+  const el = document.getElementById('cards');
+  if (!lista.length) {
+    el.innerHTML = '<div class="empty">Nessun articolo trovato.<br>Prova con un termine diverso.</div>';
+    return;
+  }
+  el.innerHTML = lista.map(d => {
+    const rc = d.rilevanza==='alta' ? 'riv-alta' : d.rilevanza==='media' ? 'riv-media' : 'riv-bassa';
+    const rlabel = d.rilevanza==='alta' ? '● Alta' : d.rilevanza==='media' ? '◐ Media' : '○ Bassa';
+    const norms = (d.normative||[]).map(n=>`<span class="tag tag-norm">${n}</span>`).join('');
+    const tags = (d.tags||[]).map(t=>`<span class="tag">${t}</span>`).join('');
+    return `<div class="card">
+      <div class="card-top">
+        <div class="card-title">${d.titolo}</div>
+        <span class="badge">${d.badge||d.categoria}</span>
+      </div>
+      <div class="meta">
+        <span>📰 <b>${d.fonte||''}</b></span>
+        <span>📅 <b>${d.data||''}</b></span>
+        <span>📄 <b>${d.pagina||''}</b></span>
+        <span class="${rc}" style="margin-left:auto">${rlabel} rilevanza</span>
+      </div>
+      <div class="sintesi">${d.sintesi||''}</div>
+      <div class="tags">${norms}${tags}</div>
+    </div>`;
+  }).join('');
+}
+
+filtra();
+</script>
+</body>
+</html>
