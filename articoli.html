@@ -171,6 +171,7 @@
     <span class="chip" onclick="cat(this,'pnrr')">PNRR</span>
     <span class="chip" onclick="cat(this,'urbanistica')">Urbanistica</span>
     <span class="chip" onclick="cat(this,'normativa')">Normative</span>
+    <span class="chip" onclick="cat(this,'strutture')">Strutture</span>
     <span class="chip" onclick="cat(this,'appalti')">Appalti</span>
     <span class="chip" onclick="cat(this,'sicurezza')">Sicurezza in cantiere</span>
     <span class="chip" onclick="cat(this,'professione')">Professione</span>
@@ -211,7 +212,7 @@ function filtra() {
   risultatiAttuali = DATA.filter(d => {
     const mc = filtCat === 'tutti' ? true
              : d.categoria === filtCat;
-    const mt = filtTxt === '' || [d.titolo, d.sintesi,
+    const mt = filtTxt === '' || [d.titolo, d.sintesi, d.autore,
       ...(d.normative||[]), ...(d.tags||[])
     ].some(s => s && s.toLowerCase().includes(filtTxt));
     return mc && mt;
@@ -282,6 +283,7 @@ function render(lista) {
         <span>📰 <b>${d.fonte||''}</b></span>
         <span>📅 <b>${d.data||''}</b></span>
         <span>📄 <b>${d.pagina||''}</b></span>
+        ${d.autore ? `<span>✍️ <b>${d.autore}</b></span>` : ''}
         <span class="${rc}" style="margin-left:auto">${rlabel} rilevanza</span>
       </div>
       <div class="tags">${norms}${tags}</div>
