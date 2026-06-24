@@ -127,6 +127,7 @@
   .pagination button.on { background: var(--verde); color: #fff; }
   .pagination button:disabled { opacity: 0.4; cursor: default; }
   .pagination .dots { color: var(--grigio-chiaro); padding: 0 4px; }
+  .pagination-top { margin-top: 0; margin-bottom: 1.25rem; }
 
   .footer { text-align: center; padding: 2rem; font-size: 12px;
              color: var(--grigio-chiaro); border-top: 1px solid #e0e3de;
@@ -171,11 +172,12 @@
     <span class="chip" onclick="cat(this,'urbanistica')">Urbanistica</span>
     <span class="chip" onclick="cat(this,'normativa')">Normative</span>
     <span class="chip" onclick="cat(this,'appalti')">Appalti</span>
+    <span class="chip" onclick="cat(this,'sicurezza')">Sicurezza in cantiere</span>
     <span class="chip" onclick="cat(this,'professione')">Professione</span>
-    <span class="chip" onclick="cat(this,'alta')">🔴 Alta rilevanza</span>
   </div>
 
   <div class="lbl" id="lbl">Tutti gli articoli</div>
+  <div class="pagination pagination-top" id="pagination-top"></div>
   <div class="cards" id="cards"></div>
   <div class="pagination" id="pagination"></div>
 
@@ -208,7 +210,6 @@ function filtra() {
   paginaCorrente = 1;
   risultatiAttuali = DATA.filter(d => {
     const mc = filtCat === 'tutti' ? true
-             : filtCat === 'alta' ? d.rilevanza === 'alta'
              : d.categoria === filtCat;
     const mt = filtTxt === '' || [d.titolo, d.sintesi,
       ...(d.normative||[]), ...(d.tags||[])
@@ -232,8 +233,9 @@ function mostraPagina(n) {
 }
 
 function renderPaginazione(totPagine) {
-  const el = document.getElementById('pagination');
-  if (totPagine <= 1) { el.innerHTML = ''; return; }
+  const elBasso = document.getElementById('pagination');
+  const elAlto = document.getElementById('pagination-top');
+  if (totPagine <= 1) { elBasso.innerHTML = ''; elAlto.innerHTML = ''; return; }
 
   let html = '';
   html += `<button onclick="mostraPagina(${paginaCorrente-1})" ${paginaCorrente===1?'disabled':''}>‹ Prec</button>`;
@@ -256,7 +258,8 @@ function renderPaginazione(totPagine) {
   });
 
   html += `<button onclick="mostraPagina(${paginaCorrente+1})" ${paginaCorrente===totPagine?'disabled':''}>Succ ›</button>`;
-  el.innerHTML = html;
+  elBasso.innerHTML = html;
+  elAlto.innerHTML = html;
 }
 
 function render(lista) {
