@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>NormaEdile — Normative edilizie per architetti</title>
+<title>Osservatorio Edilizia — Il punto giornaliero sull'edilizia</title>
 <style>
   :root {
     --verde-scuro: #14532d;
@@ -33,23 +33,23 @@
              max-width: 560px; margin: 0 auto 1rem; line-height: 1.6; }
   .hero-note { font-size: 13.5px !important; opacity: 0.92; margin-bottom: 2rem !important; }
   .hero-note b { color: #fff; }
-  .cta { display: inline-block; background: #fff; color: var(--verde-scuro);
-          font-family: -apple-system, sans-serif; font-weight: 700; font-size: 15px;
-          padding: 14px 32px; border-radius: 8px; text-decoration: none;
-          box-shadow: 0 4px 14px rgba(0,0,0,0.15); transition: transform .15s; }
-  .cta:hover { transform: translateY(-2px); }
+  .hero-link { display: inline-block; color: #fff; font-family: -apple-system, sans-serif;
+                font-weight: 700; font-size: 15px; text-decoration: none;
+                border-bottom: 2px solid var(--verde-bordo); padding-bottom: 2px;
+                transition: opacity .15s; }
+  .hero-link:hover { opacity: 0.8; }
 
   .main { max-width: 960px; margin: 0 auto; padding: 2rem 1.25rem; }
 
   .stats { display: grid; grid-template-columns: repeat(4,1fr);
-            gap: 14px; margin-bottom: 2.5rem; }
-  .stat { background: #fff; border: 1px solid #e0e3de; border-radius: 10px;
-           padding: 1.1rem; text-align: center;
-           border-top: 3px solid var(--verde); }
-  .stat-n { font-size: 28px; font-weight: 700; color: var(--verde-scuro);
+            gap: 10px; margin-bottom: 2.5rem; }
+  .stat { background: #fff; border: 1px solid #e0e3de; border-radius: 8px;
+           padding: 0.6rem 0.5rem; text-align: center;
+           border-top: 2px solid var(--verde); }
+  .stat-n { font-size: 18px; font-weight: 700; color: var(--verde-scuro);
              font-family: -apple-system, sans-serif; }
-  .stat-l { font-size: 11px; color: var(--grigio-chiaro); margin-top: 4px;
-             text-transform: uppercase; letter-spacing: 0.05em;
+  .stat-l { font-size: 9.5px; color: var(--grigio-chiaro); margin-top: 2px;
+             text-transform: uppercase; letter-spacing: 0.04em;
              font-family: -apple-system, sans-serif; }
 
   .section-title { font-size: 13px; color: var(--grigio-chiaro); margin-bottom: 1rem;
@@ -68,12 +68,6 @@
   .preview-meta { font-size: 13px; color: var(--grigio-chiaro);
                     font-family: -apple-system, sans-serif; }
 
-  .secondary-cta { text-align: center; margin-top: 1rem; }
-  .secondary-cta a { color: var(--verde-scuro); font-weight: 700;
-                       font-family: -apple-system, sans-serif; text-decoration: none;
-                       font-size: 14px; }
-  .secondary-cta a:hover { text-decoration: underline; }
-
   .footer { text-align: center; padding: 2rem; font-size: 12px;
              color: var(--grigio-chiaro); border-top: 1px solid #e0e3de;
              margin-top: 2.5rem; font-family: -apple-system, sans-serif; }
@@ -88,8 +82,8 @@
 
 <div class="header">
   <div class="header-top">
-    <div class="logo">🏛 NormaEdile
-      <span>Normative edilizie per architetti</span>
+    <div class="logo">🔍 Osservatorio Edilizia
+      <span>Il punto giornaliero sull'edilizia</span>
     </div>
   </div>
 </div>
@@ -102,7 +96,7 @@
   <p class="hero-note">Le notizie sono raccolte dai principali quotidiani italiani,
      di settore e non, e sintetizzate in schede consultabili. Un archivio pensato
      perché colleghi e professionisti possano avere un quadro chiaro in pochi minuti.</p>
-  <a class="cta" href="articoli.html">📑 Vai all'archivio articoli</a>
+  <a class="hero-link" href="articoli.html">Vedi tutti gli articoli e filtra per categoria →</a>
 </div>
 
 <div class="main">
@@ -122,25 +116,21 @@
         <div class="preview-meta">📰 Il Sole 24 Ore · 📅 25 giu 2026</div>
       </div>
       <div class="preview-card">
-        <span class="badge">Bonus Edilizi</span>
-        <div class="preview-title">Il 66% dei crediti d'imposta per agevolazioni casa: 38,3 miliardi di Superbonus</div>
-        <div class="preview-meta">📰 Il Sole 24 Ore · 📅 25 giu 2026</div>
-      </div>
-      <div class="preview-card">
         <span class="badge">Piano Casa Regionale</span>
         <div class="preview-title">Borgate da ripopolare. La sfida sono i costi di ristrutturazione</div>
         <div class="preview-meta">📰 La Stampa · 📅 25 giu 2026</div>
       </div>
-  </div>
-
-  <div class="secondary-cta">
-    <a href="articoli.html">Vedi tutti gli articoli e filtra per categoria →</a>
+      <div class="preview-card">
+        <span class="badge">PNRR</span>
+        <div class="preview-title">Pnrr, 24,2 miliardi oltre il 2026</div>
+        <div class="preview-meta">📰 MF Milano Finanza · 📅 25 Giu 2026</div>
+      </div>
   </div>
 
 </div>
 
 <div class="footer">
-  NormaEdile — Normative edilizie per architetti<br>
+  Osservatorio Edilizia — Il punto giornaliero sull'edilizia<br>
   A cura e ideazione di <b>arch Luca Comoglio</b><br>
   Aggiornato tramite analisi AI · Ultimo aggiornamento: 25/06/2026
 </div>

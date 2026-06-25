@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>NormaEdile — Archivio articoli</title>
+<title>Osservatorio Edilizia — Archivio articoli</title>
 <style>
   :root {
     --verde-scuro: #14532d;
@@ -42,14 +42,14 @@
   .main { max-width: 960px; margin: 0 auto; padding: 1.75rem 1.25rem; }
 
   .stats { display: grid; grid-template-columns: repeat(4,1fr);
-            gap: 14px; margin-bottom: 1.75rem; }
-  .stat { background: #fff; border: 1px solid #e0e3de; border-radius: 10px;
-           padding: 1.1rem; text-align: center;
-           border-top: 3px solid var(--verde); }
-  .stat-n { font-size: 28px; font-weight: 700; color: var(--verde-scuro);
+            gap: 10px; margin-bottom: 1.5rem; }
+  .stat { background: #fff; border: 1px solid #e0e3de; border-radius: 8px;
+           padding: 0.6rem 0.5rem; text-align: center;
+           border-top: 2px solid var(--verde); }
+  .stat-n { font-size: 18px; font-weight: 700; color: var(--verde-scuro);
              font-family: -apple-system, sans-serif; }
-  .stat-l { font-size: 11px; color: var(--grigio-chiaro); margin-top: 4px;
-             text-transform: uppercase; letter-spacing: 0.05em;
+  .stat-l { font-size: 9.5px; color: var(--grigio-chiaro); margin-top: 2px;
+             text-transform: uppercase; letter-spacing: 0.04em;
              font-family: -apple-system, sans-serif; }
 
   .chips { display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 1.5rem; }
@@ -128,6 +128,9 @@
   .pagination button:disabled { opacity: 0.4; cursor: default; }
   .pagination .dots { color: var(--grigio-chiaro); padding: 0 4px; }
   .pagination-top { margin-top: 0; margin-bottom: 1.25rem; }
+  .conteggio-pagina { text-align: center; font-size: 12.5px; color: var(--grigio-chiaro);
+                       font-family: -apple-system, sans-serif; margin-bottom: 8px; }
+  .conteggio-pagina:empty { margin: 0; }
 
   .footer { text-align: center; padding: 2rem; font-size: 12px;
              color: var(--grigio-chiaro); border-top: 1px solid #e0e3de;
@@ -143,8 +146,8 @@
 
 <div class="header">
   <div class="header-top">
-    <div class="logo">🏛 NormaEdile
-      <span>Normative edilizie per architetti</span>
+    <div class="logo">🔍 Osservatorio Edilizia
+      <span>Il punto giornaliero sull'edilizia</span>
     </div>
     <a class="back-link" href="index.html">← Torna alla home</a>
   </div>
@@ -178,6 +181,7 @@
   </div>
 
   <div class="lbl" id="lbl">Tutti gli articoli</div>
+  <div class="conteggio-pagina" id="conteggio-pagina"></div>
   <div class="pagination pagination-top" id="pagination-top"></div>
   <div class="cards" id="cards"></div>
   <div class="pagination" id="pagination"></div>
@@ -185,7 +189,7 @@
 </div>
 
 <div class="footer">
-  NormaEdile — Normative edilizie per architetti<br>
+  Osservatorio Edilizia — Il punto giornaliero sull'edilizia<br>
   A cura e ideazione di <b>arch Luca Comoglio</b><br>
   Aggiornato automaticamente tramite analisi AI · Ultimo aggiornamento: 25/06/2026
 </div>
@@ -229,6 +233,14 @@ function mostraPagina(n) {
   const inizio = (paginaCorrente - 1) * PER_PAGINA;
   const fetta = risultatiAttuali.slice(inizio, inizio + PER_PAGINA);
   render(fetta);
+  const cont = document.getElementById('conteggio-pagina');
+  if (totPagine > 1) {
+    cont.textContent = fetta.length === 1
+      ? '1 articolo in questa pagina'
+      : `${fetta.length} articoli in questa pagina`;
+  } else {
+    cont.textContent = '';
+  }
   renderPaginazione(totPagine);
   window.scrollTo({ top: 0, behavior: 'smooth' });
 }
