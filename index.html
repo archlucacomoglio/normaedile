@@ -31,14 +31,21 @@
            padding: 3.5rem 1.5rem 4rem; text-align: center; }
   .hero h1 { color: #fff; font-size: 32px; font-weight: 700; margin-bottom: 0.75rem; }
   .hero p { color: var(--verde-pastello); font-size: 16px; font-family: -apple-system, sans-serif;
-             max-width: 560px; margin: 0 auto 1rem; line-height: 1.6; }
+             max-width: 760px; margin: 0 auto 1rem; line-height: 1.6; }
   .hero-note { font-size: 13.5px !important; opacity: 0.92; margin-bottom: 2rem !important; }
   .hero-note b { color: #fff; }
   .hero-link { display: inline-block; color: #fff; font-family: -apple-system, sans-serif;
-                font-weight: 700; font-size: 15px; text-decoration: none;
+                font-weight: 700; font-size: 17px; text-decoration: none;
                 border-bottom: 2px solid var(--verde-bordo); padding-bottom: 2px;
                 transition: opacity .15s; }
   .hero-link:hover { opacity: 0.8; }
+
+  .hero-link-secondario { display: inline-block; color: var(--verde-scuro);
+                font-family: -apple-system, sans-serif;
+                font-weight: 700; font-size: 17px; text-decoration: none;
+                border-bottom: 2px solid var(--verde); padding-bottom: 2px;
+                transition: opacity .15s; margin-bottom: 2rem; }
+  .hero-link-secondario:hover { opacity: 0.7; }
 
   .main { max-width: 960px; margin: 0 auto; padding: 2rem 1.25rem; }
 
@@ -75,6 +82,29 @@
                 color: var(--grigio-testo); white-space: pre-wrap;
                 font-family: -apple-system, sans-serif; }
   .sunto-vuoto { color: var(--grigio-chiaro); font-style: italic; white-space: normal; }
+
+  .carosello-slide { position: relative; overflow: hidden; border-radius: 12px;
+                       border: 1px solid #e0e3de; margin: 0 auto 1rem; background: #fff;
+                       max-width: 900px; }
+  .caption-testo { text-align: center; font-weight: 700;
+                     font-family: -apple-system, sans-serif;
+                     font-size: 16px; line-height: 1.5; color: var(--grigio-testo);
+                     white-space: pre-wrap; max-width: 630px; margin: 0 auto 1.25rem; }
+  .slide-track { display: flex; transition: transform .35s ease; }
+  .slide { flex: 0 0 100%; display: flex; justify-content: center; }
+  .slide img { width: 100%; height: auto; display: block; }
+  .pallini-nav { display: flex; justify-content: center; align-items: center;
+                  gap: 8px; margin-bottom: 2.2rem; flex-wrap: wrap; }
+  .nav-freccia { border: none; background: none; cursor: pointer; font-size: 18px;
+                  line-height: 1; padding: 5px 10px; border-radius: 6px;
+                  color: var(--grigio-chiaro); transition: background .15s, color .15s; }
+  .nav-freccia:hover { background: var(--verde-pastello); color: var(--verde-scuro); }
+  .nav-prima { background: var(--verde); color: #fff; font-weight: 700; }
+  .nav-prima:hover { background: var(--verde-scuro); color: #fff; }
+  .pallino { width: 10px; height: 10px; border-radius: 50%; border: none;
+              background: #d1d5db; cursor: pointer; padding: 0;
+              transition: background .15s; }
+  .pallino.attivo { background: var(--verde); }
 
   .footer { text-align: center; padding: 2rem; font-size: 12px;
              color: var(--grigio-chiaro); border-top: 1px solid #e0e3de;
@@ -117,21 +147,30 @@
   </div>
 
   <div class="section-title">Le notizie di oggi 28-06-2026</div>
-  <div class="sunto-box">🏗️ PNRR E FONDI PUBBLICI
+  <div class="caption-testo">Il punto sull&#x27;edilizia di oggi, 28 giugno 2026 📋
 
-- Il Pnrr arriva al termine formale del 30 giugno 2026 con una spesa dichiarata di 113,5 miliardi su 194,4 stanziati (pagamenti fermi al 48,5%): l&#x27;Ecobonus da 13,95 mld è quasi del tutto assorbito, la rigenerazione urbana è al 73,79%, mentre delle 1.038 case di comunità solo il 3,8% è realmente operativo. L&#x27;Europa concede lavori residuali per 60 giorni, con richieste di pagamento ammesse fino al 31 agosto e bonifici entro il 31 dicembre. Cottarelli giudica critico l&#x27;impatto dei bonus edilizi sul disavanzo pubblico.
+Tra le notizie principali: il bilancio finale del Pnrr al 30 giugno, il caldo estremo nei cantieri, lo sblocco di un mega-resort tramite le Zes in Sardegna e il crollo a Villa La Concezione di Sangano.
 
-🌡️ SICUREZZA IN CANTIERE E LAVORO
+Una di quelle notizie su cui vale la pena fermarsi un attimo: usare uno strumento pensato per le piccole imprese del Sud per sbloccare un resort di 50 ettari contro il parere di Comune, Regione, Soprintendenza e Ministero della Cultura è un precedente pesante, e il ricorso al Tar dell&#x27;8 luglio dirà molto sul futuro dei vincoli paesaggistici nel Centro-Sud.
 
-- Sul caldo estremo il decreto Infrastrutture garantisce la cassa integrazione per le imprese che fermano i lavori, ma senza obbligo di stop, lasciando la decisione ai datori di lavoro; le ordinanze regionali sono più stringenti (stop 12.30-16) ma con ampie deroghe per PA e concessionari di pubblico servizio. I controlli restano critici: segnalati cantieri ancora operativi nelle ore più calde a Palermo, e un monitoraggio termico a Roma ha rilevato temperature superficiali nei cantieri fino a 100 gradi, con un rischio stimato di 1,5 milioni di lavoratori esposti questo weekend in Italia.
+Il sunto completo, con tutte le fonti e i riferimenti normativi, sarà disponibile a breve su Osservatorio Edilizia — il lancio è dietro l&#x27;angolo.
 
-🏙️ URBANISTICA
+#edilizia #architettura #normativa #pnrr #bonusedilizi #pianocasa #sicurezzacantiere #urbanistica #zes</div>
+  <div class="carosello-slide">
+    <div class="slide-track" id="slide-track">
+      <div class="slide attiva"><img src="slides/2026-06-28_slide01.png" alt="Slide 1 del 28/06/2026" loading="lazy"></div><div class="slide"><img src="slides/2026-06-28_slide02.png" alt="Slide 2 del 28/06/2026" loading="lazy"></div><div class="slide"><img src="slides/2026-06-28_slide03.png" alt="Slide 3 del 28/06/2026" loading="lazy"></div><div class="slide"><img src="slides/2026-06-28_slide04.png" alt="Slide 4 del 28/06/2026" loading="lazy"></div><div class="slide"><img src="slides/2026-06-28_slide05.png" alt="Slide 5 del 28/06/2026" loading="lazy"></div><div class="slide"><img src="slides/2026-06-28_slide06.png" alt="Slide 6 del 28/06/2026" loading="lazy"></div>
+    </div>
+  </div>
+  <div class="pallini-nav" id="pallini-nav">
+    <button class="nav-freccia nav-prima" onclick="vaiPrima()" aria-label="Vai alla prima slide">⏮</button>
+    <button class="nav-freccia nav-prec" onclick="vaiPrecedente()" aria-label="Slide precedente">‹</button>
+    <button class="pallino attivo" onclick="vaiSlide(0)" aria-label="Vai alla slide 1"></button><button class="pallino" onclick="vaiSlide(1)" aria-label="Vai alla slide 2"></button><button class="pallino" onclick="vaiSlide(2)" aria-label="Vai alla slide 3"></button><button class="pallino" onclick="vaiSlide(3)" aria-label="Vai alla slide 4"></button><button class="pallino" onclick="vaiSlide(4)" aria-label="Vai alla slide 5"></button><button class="pallino" onclick="vaiSlide(5)" aria-label="Vai alla slide 6"></button>
+    <button class="nav-freccia nav-succ" onclick="vaiSuccessiva()" aria-label="Slide successiva">›</button>
+  </div>
 
-- La disciplina delle Zone Economiche Speciali (Zes), pensata per piccole attività produttive nel Mezzogiorno, viene usata per sbloccare un mega-resort di 50 ettari a Cala Finanza (Tavolara, Sardegna) nonostante i pareri negativi di Comune, Regione, Soprintendenza e Ministero della Cultura: il via libera del Consiglio dei ministri bypassa il Piano Paesaggistico regionale e il Codice Urbani. Wwf e Italia Nostra parlano di rischio sistemico, vista l&#x27;estensione delle Zes a quasi tutti i comuni sardi e campani; la Regione Sardegna ha presentato ricorso al Tar (udienza 8 luglio), che farà giurisprudenza sull&#x27;uso delle Zes in deroga ai vincoli paesaggistici nel Centro-Sud.
-
-🏛️ STRUTTURE E PATRIMONIO STORICO
-
-- A Sangano (Torino) è crollata una porzione del tetto di Villa La Concezione, dimora nobiliare ottocentesca in ristrutturazione con lavori fermi da tempo: la copertura sarebbe collassata per cedimento strutturale interno legato al degrado e all&#x27;assenza di manutenzione, senza causa esterna e senza feriti. Il Comune valuta ora le condizioni statiche del resto dell&#x27;edificio, vincolato e con interni di pregio. Il caso richiama l&#x27;importanza di verifiche statiche periodiche sui cantieri di restauro sospesi a lungo.</div>
+  <div style="text-align:center;">
+    <a class="hero-link-secondario" href="articoli.html">Vedi tutti gli articoli e filtra per categoria →</a>
+  </div>
 
   <div class="section-title">In evidenza</div>
   <div class="preview-grid">
@@ -160,5 +199,22 @@
   Aggiornato tramite analisi AI · Ultimo aggiornamento: 28/06/2026
 </div>
 
+<script>
+let slideAttuale = 0;
+const totaleSlide = 6;
+
+function vaiSlide(indice) {
+  const track = document.getElementById('slide-track');
+  if (!track) return;
+  const pallini = document.querySelectorAll('#pallini-nav .pallino');
+  slideAttuale = indice;
+  track.style.transform = `translateX(-${indice * 100}%)`;
+  pallini.forEach((p, i) => p.classList.toggle('attivo', i === indice));
+}
+
+function vaiPrima() { vaiSlide(0); }
+function vaiPrecedente() { vaiSlide(Math.max(0, slideAttuale - 1)); }
+function vaiSuccessiva() { vaiSlide(Math.min(totaleSlide - 1, slideAttuale + 1)); }
+</script>
 </body>
 </html>
