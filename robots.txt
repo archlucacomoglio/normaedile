@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://archlucacomoglio.github.io/OSSERVATORIO_EDILIZIA/sitemap.xml
