@@ -1,6 +1,316 @@
 {
   "articoli": [
     {
+      "titolo": "Mini-olimpiade e maxi-costi: spesi 400mln / Gli sciacalli di Taranto",
+      "autore": "Lorenzo Vendemiale, Leo Amato",
+      "fonte": "Il Fatto Quotidiano",
+      "data": "05 lug 2026",
+      "pagina": "p. 8-9",
+      "categoria": "appalti",
+      "badge": "Appalti pubblici",
+      "rilevanza": "alta",
+      "sintesi": "Inchiesta sui Giochi del Mediterraneo di Taranto (21 agosto 2026): il budget per impianti sportivi e gare è lievitato da 150 a circa 400 milioni di euro, con la Corte dei Conti che certifica uno sforamento del 25% sulla sola voce gare (100 milioni, quasi tutti pubblici) e minaccia un ulteriore aumento dei costi. Dopo quattro anni di immobilismo il governo Meloni ha nominato commissario Massimo Ferrarese, uomo vicino al ministro Fitto, scatenando conflitti con gli enti locali pugliesi. A un mese e mezzo dall'inaugurazione 25 opere su varie devono ancora essere completate, tra cui lo stadio del nuoto di Torre d'Ayala (41 milioni) a rischio chiusura per gli alti costi di gestione, mentre furti e vandalismi colpiscono già i cantieri. Pesano inoltre le pressioni dell'organismo internazionale CIGM sui contratti di fornitura, la scelta costosa di noleggiare due navi per ospitare atleti e staff, e il timore diffuso che, spenti i riflettori, molte strutture tornino rapidamente in stato di abbandono.",
+      "normative": [],
+      "tags": [
+        "Giochi del Mediterraneo",
+        "Taranto",
+        "appalti pubblici",
+        "commissario straordinario",
+        "impianti sportivi",
+        "Corte dei Conti"
+      ]
+    },
+    {
+      "titolo": "Inceneritore, area promessa a metà prezzo",
+      "autore": "Vincenzo Bisbiglia",
+      "fonte": "Il Fatto Quotidiano",
+      "data": "05 lug 2026",
+      "pagina": "p. 13",
+      "categoria": "appalti",
+      "badge": "Appalti pubblici",
+      "rilevanza": "alta",
+      "sintesi": "Il Comune di Roma, tramite Ama Spa, ha pagato nel 2022 alla società Immobiliare Palmiero 7,5 milioni di euro per il terreno destinato al nuovo inceneritore capitolino, sebbene tre mesi prima quella stessa area fosse stata praticamente già venduta a un altro soggetto privato per soli 4 milioni tramite un preliminare poi rescisso con un indennizzo di 1,3 milioni. L'inchiesta della Procura di Roma per truffa vede indagati l'ex presidente di Ama Daniele Pace e il geometra Umberto Linari, che avrebbe certificato un prezzo finale ritenuto 'gonfiato'. L'ex sindaca Virginia Raggi ha presentato un nuovo esposto alla Corte dei Conti, segnalando anche l'omissione nelle perizie di vincoli archeologici sull'area, che ha costretto il Comune a spendere ulteriori risorse pubbliche per acquistare un terreno sostitutivo dallo Stato. L'impianto, gestito per 60 anni da RenewRome (Acea, gruppo Caltagirone, Suez), dovrebbe essere inaugurato nel 2027.",
+      "normative": [],
+      "tags": [
+        "inceneritore",
+        "Roma",
+        "Ama Spa",
+        "appalti pubblici",
+        "Corte dei Conti",
+        "compravendita immobiliare pubblica"
+      ]
+    },
+    {
+      "titolo": "Bari, i braccianti protestano: \"Pnrr, 30 milioni buttati\"",
+      "autore": "Marco Franchi",
+      "fonte": "Il Fatto Quotidiano",
+      "data": "05 lug 2026",
+      "pagina": "p. 12",
+      "categoria": "pnrr",
+      "badge": "PNRR abitativo",
+      "rilevanza": "media",
+      "sintesi": "Oltre 200 braccianti agricoli del ghetto foggiano di Torretta Antonacci, nel comune di San Severo, hanno occupato la basilica di San Nicola a Bari per denunciare le condizioni disumane in cui vivono, ammassati in baracche senza acqua, luce e servizi igienici adeguati. Al centro della protesta il fallimento del progetto di bonifica dell'insediamento, che avrebbe dovuto essere finanziato con fondi del Pnrr destinati proprio a risolvere l'emergenza abitativa: secondo Usb Braccianti, 30 milioni di euro del Piano sono stati 'indegnamente buttati dalla finestra' senza alcun risultato concreto. I manifestanti hanno incontrato una delegazione guidata dal governatore della Puglia Antonio Decaro, chiedendo lo stanziamento di risorse equivalenti a quelle perdute per garantire finalmente acqua, luce, servizi igienici e infrastrutture di base prima della prossima stagione della raccolta del pomodoro.",
+      "normative": [],
+      "tags": [
+        "Pnrr",
+        "edilizia abitativa",
+        "braccianti",
+        "San Severo",
+        "Puglia",
+        "bonifica ghetto"
+      ]
+    },
+    {
+      "titolo": "Milano e i grattacieli. La legale: \"Esposto per intimidire chi difende i cittadini\"",
+      "autore": "Gianni Barbacetto",
+      "fonte": "Il Fatto Quotidiano",
+      "data": "05 lug 2026",
+      "pagina": "p. 20",
+      "categoria": "urbanistica",
+      "badge": "Urbanistica",
+      "rilevanza": "media",
+      "sintesi": "Si acuisce lo scontro sull'urbanistica milanese tra costruttori e cittadini che si costituiscono parte civile nei processi per presunti abusi edilizi. Nel procedimento sul 'palazzo nel cortile' di piazza Aspromonte, l'avvocata Veronica Dini, che rappresenta un gruppo di residenti costituitisi parte civile al posto del Comune, ha ricevuto un esposto disciplinare dall'avvocato del costruttore Andrea Bezziccheri dopo aver interrogato in udienza preliminare il progettista Paolo Mazzoleni; Dini denuncia comportamenti 'espressamente intimidatori'. Un caso analogo riguarda il procedimento sulla Torre Milano, appena concluso con un'assoluzione in primo grado per 'buona fede' degli imputati, che tuttavia non esclude che il titolo edilizio con cui il grattacielo è stato realizzato sia contrario alle norme urbanistiche vigenti; anche in quel caso il costruttore Carlo Rusconi aveva inizialmente denunciato i cittadini che intendevano costituirsi parte civile.",
+      "normative": [],
+      "tags": [
+        "urbanistica Milano",
+        "titolo edilizio",
+        "grattacieli",
+        "parte civile",
+        "Torre Milano"
+      ]
+    },
+    {
+      "titolo": "La lite in piazza e 2 like di troppo per Gualtieri",
+      "autore": "Paola Zanca",
+      "fonte": "Il Fatto Quotidiano",
+      "data": "05 lug 2026",
+      "pagina": "p. 10",
+      "categoria": "urbanistica",
+      "badge": "Mercato immobiliare",
+      "rilevanza": "bassa",
+      "sintesi": "Rubrica di cronaca politica romana che ricostruisce lo scontro social tra Valerio Carocci, fondatore della Piccolo America, e l'ex assessore Christian Raimo sul bilancio urbanistico del sindaco Gualtieri a un anno dalle elezioni. Al centro della polemica un accordo tra Comune di Roma e Regione Lazio per trasformare un cinema di via del Corso in un'area commerciale attraverso capitali privati, invece del modello no-profit (sala cinema più aula studio) proposto da Carocci sul modello di Trastevere; quest'ultimo denuncia genericamente la speculazione immobiliare che starebbe 'avvelenando' la città, pur senza essersi finora esposto su altri casi analoghi di trasformazione urbanistica romana, sollevando le critiche di altri comitati cittadini per la sua selettività.",
+      "normative": [],
+      "tags": [
+        "Roma",
+        "urbanistica",
+        "speculazione immobiliare",
+        "via del Corso",
+        "Gualtieri"
+      ]
+    },
+    {
+      "titolo": "Marche, dal 2020 nessun via libera per progetti eolici",
+      "autore": "Michele Romano",
+      "fonte": "Il Sole 24 Ore",
+      "data": "05 lug 2026",
+      "pagina": "p. 13",
+      "categoria": "normativa",
+      "badge": "Normative regionali",
+      "rilevanza": "media",
+      "sintesi": "L'articolo, parte della serie 'Autorizzazioni bloccate', fotografa lo stallo autorizzativo per l'eolico nelle Marche: dal 2020 nessun progetto è stato approvato, mentre risultano fermi al Mase 8 progetti eolici per 470 MW e 4 di fotovoltaico per 108 MW, secondo l'Osservatorio REgions 2030 di Elemens e Public Affairs Advisors. L'assessore regionale Giacomo Bugaro spiega che le aree ventose idonee sono limitate a due zone appenniniche ad alto valore ambientale e paesaggistico, e che la Regione privilegia il solare (182 impianti fotovoltaici autorizzati dal 2020, perlopiù di piccola taglia 4-5 MW) rispetto all'eolico. Sono al vaglio nella Procedura Autorizzativa Unica Regionale (Paur) altri 235 MW di fotovoltaico e 90 MW di eolico. Per un professionista tecnico l'articolo è utile perché descrive i vincoli paesaggistico-ambientali che condizionano l'iter autorizzativo regionale e la distanza dagli obiettivi di burden sharing 2030 (obiettivo 2,3 GW di nuova potenza, mancano ancora 1,68 GW), oltre al ruolo della nuova pianificazione regionale in materia energetica (Piano Energia e Clima regionale, Prec 2030) attualmente in revisione.",
+      "normative": [
+        "Paur - Procedura Autorizzativa Unica Regionale",
+        "Piano Energia e Clima regionale (Prec) 2030",
+        "Burden sharing regionale (obiettivo 2,3 GW al 2030)"
+      ],
+      "tags": [
+        "fonti rinnovabili",
+        "eolico",
+        "fotovoltaico",
+        "Marche",
+        "autorizzazioni regionali",
+        "pianificazione energetica",
+        "vincoli paesaggistici"
+      ]
+    },
+    {
+      "titolo": "Macerata, a Monte Cavallo parere negativo su area già autorizzata",
+      "autore": "Michele Romano",
+      "fonte": "Il Sole 24 Ore",
+      "data": "05 lug 2026",
+      "pagina": "p. 13",
+      "categoria": "normativa",
+      "badge": "Autorizzazioni bloccate",
+      "rilevanza": "bassa",
+      "sintesi": "Il caso di due progetti eolici del gruppo Carlo Maresca nel Maceratese (12 turbine da 49,4 MW a Monte Cavallo e 9 da 29,7 MW a Gagliole) mostra le criticità del sistema autorizzativo regionale marchigiano: nonostante un bando comunale del 2024 vinto dalla società di scopo e un contratto preliminare firmato, la Regione ha espresso parere negativo su Monte Cavallo nell'ambito dell'istruttoria di Via in corso al Mase, mentre per Gagliole è arrivato tre mesi fa il decreto negativo regionale a conclusione della Valutazione di Impatto Ambientale, nonostante il progetto avesse già ricevuto pareri negativi da due comuni, proteste cittadine e un ricorso al Tar. L'articolo è rilevante per un tecnico perché illustra in concreto l'iter di Via regionale, l'interazione tra bandi comunali per la concessione di aree demaniali e le successive valutazioni ambientali statali/regionali, e le tempistiche (oltre 4 anni di istruttoria) che possono vanificare investimenti già avviati (4,5 milioni di euro spesi tra progettazione e acquisto terreni).",
+      "normative": [
+        "Via - Valutazione di Impatto Ambientale",
+        "Bando comunale per concessione di aree demaniali",
+        "Istruttoria regionale Marche"
+      ],
+      "tags": [
+        "eolico",
+        "Macerata",
+        "Via",
+        "diniego regionale",
+        "Legambiente",
+        "aree demaniali"
+      ]
+    },
+    {
+      "titolo": "Le case Atc vietate ai disabili - \"Montascale fermi da 20 anni\"",
+      "autore": "Francesco Morelli",
+      "fonte": "La Stampa",
+      "data": "05 lug 2026",
+      "pagina": "p. 44",
+      "categoria": "normativa",
+      "badge": "Barriere architettoniche",
+      "rilevanza": "media",
+      "sintesi": "Il reportage denuncia le condizioni di grave inaccessibilità nel complesso di edilizia popolare di via Bioglio, nel quartiere Barriera di Milano a Torino, gestito da Atc (Agenzia Territoriale per la Casa del Piemonte). Al civico 36 e in altri numeri civici della via i montascale risultano fermi da circa vent'anni e divorati dalla ruggine, costringendo persone anziane e con disabilità a soluzioni di fortuna (come il trasporto a spalla) per uscire di casa. Atc ha comunicato che gli impianti verranno sostituiti, ad eccezione del civico 24 per cui è prevista una verifica di funzionamento; per il complesso di via Bioglio-Pacini è inoltre in programma un intervento di manutenzione straordinaria su sei servoscala e piattaforme elevatrici, il cui affidamento è stato oggetto di una gara d'appalto indetta nelle settimane scorse. Per un architetto o tecnico, il caso è un promemoria concreto degli obblighi di manutenzione e accessibilità che gravano sugli enti gestori di edilizia residenziale pubblica e delle tempistiche reali (anche pluriennali) con cui si muovono gli interventi su impianti elevatori in condomini popolari.",
+      "normative": [],
+      "tags": [
+        "edilizia popolare",
+        "accessibilità",
+        "barriere architettoniche",
+        "Atc",
+        "Torino",
+        "appalto"
+      ]
+    },
+    {
+      "titolo": "Arriva l'oasi urbana di zona San Salvario per le bolle di calore",
+      "autore": "Riccardo Bessone",
+      "fonte": "La Stampa",
+      "data": "05 lug 2026",
+      "pagina": "p. 44",
+      "categoria": "urbanistica",
+      "badge": "Rigenerazione urbana",
+      "rilevanza": "media",
+      "sintesi": "A Torino, nel quartiere San Salvario, prende avvio il progetto \"Oasi urbane\", un intervento di depaving (rimozione dell'asfalto) e piantumazione lungo via Cesare Lombroso, pensato per contrastare le isole di calore urbane. L'area, oggi interdetta al traffico ma completamente asfaltata, verrà trasformata con alberi di ibisco, piante per insetti impollinatori, rain garden e vernici fotocatalitiche sulle superfici residue in grado di riflettere la luce e abbattere gli inquinanti atmosferici. I lavori di rimozione dell'asfalto partiranno a luglio, mentre la messa a dimora delle piante è programmata per settembre, quando le temperature saranno più favorevoli. L'intervento, coordinato dall'organizzazione OrtiAlti (di cui è vicepresidente l'architetto Maicol Negrello) insieme alla Circoscrizione 7 e all'associazione Asai, ha un costo di 20 milioni di euro finanziati dal bando \"Reazioni\" della Compagnia di San Paolo. Per i professionisti del settore è un esempio di rigenerazione a basso budget di spazi pubblici sottoutilizzati, con tecniche (depaving, rain garden, vernici fotocatalitiche) sempre più richieste nei progetti di adattamento climatico urbano.",
+      "normative": [],
+      "tags": [
+        "rigenerazione urbana",
+        "depaving",
+        "rain garden",
+        "isole di calore",
+        "Torino"
+      ]
+    },
+    {
+      "titolo": "Lavori di riqualificazione sull'asfalto e i marciapiedi nel cortile del Polo del '900 - Riqualificazione piazza Alimonda",
+      "autore": "D. Mol.",
+      "fonte": "La Stampa",
+      "data": "05 lug 2026",
+      "pagina": "p. 44",
+      "categoria": "urbanistica",
+      "badge": "Riqualificazione",
+      "rilevanza": "bassa",
+      "sintesi": "Sono partiti i lavori di riqualificazione dell'area di piazza Alimonda, nel quartiere Aurora di Torino, uno degli spazi più frequentati dai residenti. Gli interventi, concordati con la Circoscrizione 7, mirano a rifare e mettere in sicurezza la strada e i marciapiedi nel perimetro compreso tra via Varese, via Padre Denza e via Camino, e comprendono anche opere per l'abbattimento delle barriere architettoniche, con l'obiettivo di rendere più agevole il passaggio a persone in carrozzina e a genitori con passeggino. I lavori, programmati durante il periodo estivo per ridurre al minimo i disagi ai cittadini, dureranno alcune settimane. Per un tecnico è un caso tipico di intervento di manutenzione straordinaria su suolo pubblico con finalità di accessibilità, pianificato in coordinamento con l'amministrazione circoscrizionale.",
+      "normative": [],
+      "tags": [
+        "riqualificazione",
+        "barriere architettoniche",
+        "Torino",
+        "Aurora"
+      ]
+    },
+    {
+      "titolo": "Rosta, riaprono le Poste: nuovi servizi",
+      "autore": "F. All.",
+      "fonte": "La Stampa",
+      "data": "05 lug 2026",
+      "pagina": "p. 45",
+      "categoria": "urbanistica",
+      "badge": "Ristrutturazione",
+      "rilevanza": "bassa",
+      "sintesi": "L'ufficio postale di Rosta, comune della città metropolitana di Torino, ha riaperto al pubblico dopo gli interventi di ristrutturazione previsti nell'ambito del progetto Polis, il piano nazionale di Poste Italiane per il potenziamento e l'ammodernamento degli uffici postali nei piccoli centri, anche in chiave di presidio dei servizi pubblici essenziali. Oltre ai consueti servizi, l'ufficio rinnovato offre ora la possibilità di richiedere o rinnovare il passaporto direttamente allo sportello, con consegna del documento a domicilio, senza necessità di recarsi in Questura. Orari: lunedì-venerdì 8,20-13,35, sabato fino alle 12,35. Per un tecnico l'articolo è un breve segnale dell'avanzamento del progetto Polis, che comporta interventi edilizi di ristrutturazione su un patrimonio immobiliare diffuso sul territorio nazionale.",
+      "normative": [],
+      "tags": [
+        "progetto Polis",
+        "ristrutturazione",
+        "Poste Italiane",
+        "Rosta"
+      ]
+    },
+    {
+      "titolo": "Firenze, la sfida delle sedi (in periferia) tra la Lega e il generale",
+      "autore": "Jacopo Storni",
+      "fonte": "Corriere della Sera",
+      "data": "04 lug 2026",
+      "pagina": "p. 14",
+      "categoria": "piano-casa",
+      "badge": "Piano Casa",
+      "rilevanza": "media",
+      "sintesi": "L'articolo racconta l'inaugurazione a Firenze, nel quartiere periferico di Brozzi-Le Piagge, di una nuova sede regionale toscana della Lega da parte del vicepremier Matteo Salvini, ma contiene un passaggio politico di interesse per il settore edilizio: Salvini rivendica il sostegno del proprio partito al Piano Casa, il provvedimento nazionale volto a favorire l'accesso all'abitazione, criticando apertamente i parlamentari di Roberto Vannacci (Futuro Nazionale) per aver votato contro la misura in Parlamento. Il vicepremier sottolinea come il tema della casa non debba essere oggetto di contrapposizione ideologica tra destra e sinistra o tra sovranisti ed europeisti, rivendicandone la natura trasversale e sociale. Per i tecnici del settore e gli operatori dell'edilizia residenziale il riferimento conferma che il Piano Casa resta un provvedimento oggetto di dibattito politico attivo tra le forze di maggioranza, con possibili ricadute su politiche abitative pubbliche ed edilizia popolare, anche se l'articolo non fornisce dettagli tecnici sul contenuto normativo del provvedimento né tempistiche di approvazione.",
+      "normative": [
+        "Piano Casa (provvedimento nazionale in discussione)"
+      ],
+      "tags": [
+        "piano casa",
+        "edilizia popolare",
+        "politiche abitative",
+        "Lega",
+        "Vannacci"
+      ]
+    },
+    {
+      "titolo": "Lavoravano con 38 gradi. Il responsabile indagato",
+      "autore": "n.d.",
+      "fonte": "Corriere della Sera",
+      "data": "04 lug 2026",
+      "pagina": "p. 19",
+      "categoria": "sicurezza",
+      "badge": "Sicurezza Cantieri",
+      "rilevanza": "alta",
+      "sintesi": "Nel Mantovano i carabinieri hanno sorpreso cinque operai al lavoro sui ponteggi di una villa storica a Gonzaga alle 14.30 dello scorso 30 giugno, con temperature di 38 gradi, in violazione dell'ordinanza urgente della Regione Lombardia che vieta il lavoro nei settori a rischio, tra cui edilizia e agricoltura, nella fascia oraria tra le 12.30 e le 16 nei giorni di caldo estremo. Al termine dei controlli il responsabile dei lavori della ditta esecutrice è stato denunciato e sanzionato con una multa di 500 euro per non aver vigilato sul rispetto delle norme anticaldo da parte della squadra. La vicenda arriva a pochi giorni dalla morte di un bracciante 55enne colto da malore da caldo mentre lavorava in un campo a Borgocarbonara, episodio che ha spinto il prefetto di Mantova, nell'ultima riunione del Comitato provinciale per l'ordine e la sicurezza pubblica, a chiedere alle forze dell'ordine di intensificare i controlli sui cantieri edili e sui luoghi di lavoro esposti alle alte temperature, tema di stretta attualità per tecnici e direttori lavori tenuti a garantire la sicurezza delle maestranze in cantiere.",
+      "normative": [
+        "Ordinanza Regione Lombardia - divieto lavoro nelle ore più calde (12.30-16.00) nei settori edilizia e agricoltura"
+      ],
+      "tags": [
+        "sicurezza cantieri",
+        "ondata di caldo",
+        "ordinanza regionale",
+        "controlli carabinieri",
+        "responsabilità del datore di lavoro"
+      ]
+    },
+    {
+      "titolo": "Arrigo Cipriani protesta «Chiudo il negozio contro la violenza delle borseggiatrici»",
+      "autore": "Maria Paola Scaramuzza",
+      "fonte": "Corriere della Sera",
+      "data": "04 lug 2026",
+      "pagina": "p. 21",
+      "categoria": "urbanistica",
+      "badge": "Affitti e Overtourism",
+      "rilevanza": "media",
+      "sintesi": "Nell'intervista, incentrata principalmente sulle aggressioni subite dalle commesse del suo nuovo negozio veneziano da parte di baby borseggiatrici, il patron dell'Harry's Bar Arrigo Cipriani affronta anche il tema del sovraffollamento turistico di Venezia e delle relative ricadute normative sul mercato immobiliare e locativo cittadino. Cipriani si dichiara contrario al contributo di accesso già introdotto dal Comune di Venezia per regolare i flussi turistici, definendolo una misura inutile, costosa da gestire e in contrasto con le regole di libera circolazione dei cittadini. Propone in alternativa l'introduzione di un'Iva speciale al 5% a carico di tutti i visitatori (turisti e residenti), con compensazioni per gli abitanti, ad esempio sulla tassa dei rifiuti, e chiede una legge nazionale sui centri storici per contenere gli affitti turistici brevi, che a Venezia avrebbero ormai superato quota 50mila unità, più del numero degli abitanti stessi, alimentando lo spopolamento del centro storico e riducendo la disponibilità di alloggi per la residenza stabile dei veneziani.",
+      "normative": [
+        "Contributo di accesso del Comune di Venezia",
+        "Proposta di IVA speciale al 5% sui visitatori (non ancora legge)"
+      ],
+      "tags": [
+        "affitti turistici",
+        "overtourism",
+        "Venezia",
+        "contributo d'accesso",
+        "spopolamento centri storici",
+        "mercato immobiliare"
+      ]
+    },
+    {
+      "titolo": "Fiumicino, il Tar blocca il progetto del porto privato per crociere",
+      "autore": "Alex Giuzio",
+      "fonte": "il manifesto",
+      "data": "04 Lug 2026",
+      "pagina": "p. 4",
+      "categoria": "urbanistica",
+      "badge": "VIA e Urbanistica",
+      "rilevanza": "alta",
+      "sintesi": "Il Tar del Lazio ha annullato il decreto ministeriale che nel novembre 2025 aveva rilasciato la Valutazione di Impatto Ambientale (VIA) positiva al progetto del nuovo porto crocieristico di Fiumicino, promosso dalla società Fiumicino Waterfront, controllata da Royal Caribbean. I giudici hanno accolto i ricorsi di associazioni ambientaliste, sindacali e di categoria, riscontrando una relazione paesaggistica incompleta e giudicata volta a produrre una 'falsa rappresentazione' dell'opera, presentata come semplice porto turistico da diporto anziché come scalo polifunzionale destinato soprattutto a navi da crociera di grandi dimensioni. Contestati anche l'anomalo e 'irrazionale' frazionamento dei processi decisionali e il mancato coinvolgimento dell'Autorità di bacino sulla relazione idrogeologica. Il progetto prevedeva la cementificazione e privatizzazione di un'area equivalente a 140 campi da calcio alla foce del Tevere, con impatti su un'area protetta, erosione costiera a Fregene e Focene ed emissioni inquinanti delle navi. La sentenza non è definitiva: la società ha annunciato appello, mentre il Tar ha indicato di riavviare l'iter seguendo correttamente la procedura di VIA (disciplinata a livello nazionale dal Codice dell'ambiente, d.lgs. 152/2006) e coinvolgendo tutte le autorità competenti, incluso il coordinamento tra disciplina paesaggistica, ambientale e portuale. Per tecnici e progettisti del settore è un precedente rilevante sul tema del frazionamento delle procedure autorizzative e sulla necessità che la VIA rifletta la reale natura dimensionale e funzionale delle opere infrastrutturali costiere prima del rilascio dei titoli abilitativi.",
+      "normative": [
+        "Procedura di VIA (d.lgs. 152/2006, Codice dell'ambiente)",
+        "Decreto ministeriale VIA nov. 2025 (annullato dal Tar Lazio)"
+      ],
+      "tags": [
+        "VIA",
+        "porto crocieristico",
+        "Tar Lazio",
+        "urbanistica costiera",
+        "impatto ambientale",
+        "Fiumicino"
+      ]
+    },
+    {
       "titolo": "Piano casa, maxi sconto ai privati sugli oneri da pagare ai Comuni",
       "autore": "Giuseppe Latour",
       "fonte": "Il Sole 24 Ore",
@@ -485,39 +795,39 @@
     },
     {
       "titolo": "Il Piano casa è legge. Protestano gli inquilini",
-      "autore": "n.d. (red. pol.)",
+      "autore": "red. pol.",
       "fonte": "il manifesto",
-      "data": "02 Lug 2026",
+      "data": "02 lug 2026",
       "pagina": "p. 7",
       "categoria": "piano-casa",
       "badge": "Piano Casa",
       "rilevanza": "alta",
-      "sintesi": "Il Senato ha approvato in via definitiva, blindato dal voto di fiducia (106 sì, tutte le opposizioni contrarie), il Piano casa promosso dai ministri Salvini e Meloni. Il provvedimento affida principalmente al soggetto privato la costruzione di alloggi a canone calmierato, in cambio di agevolazioni di carattere urbanistico, fiscale e regolamentare, prevedendo inoltre il recupero di alloggi popolari sfitti. In totale sono annunciati 100mila alloggi in dieci anni, di cui 60mila tramite recupero del patrimonio esistente, con una dotazione contestata di soli 16mila euro per unità da ristrutturare. Le associazioni dei costruttori (Assoimmobiliare) accolgono la misura ma chiedono la piena detraibilità dell'Iva per le locazioni residenziali e la riduzione dell'aliquota sulle locazioni dal 10% al 5%; i sindacati degli inquilini (Sunia, Sicet, Uniat, Unione inquilini) bocciano il testo come inadeguato all'emergenza abitativa e aprono ad accuse di favorire operazioni speculative e privatizzazione del patrimonio pubblico. In parallelo il governo ha presentato un ddl sugli sfratti che velocizza le procedure esecutive senza dotare i Comuni di strumenti per gestire l'emergenza abitativa.",
+      "sintesi": "Il decreto Piano casa voluto da Salvini e Meloni è passato in Senato senza mandato al relatore e blindato dal voto di fiducia, con 106 sì e il voto contrario di tutte le opposizioni. Il provvedimento affida al privato la costruzione di alloggi a canone calmierato, con contropartite di agevolazioni urbanistiche, fiscali e regolamentari, oltre a una proposta di piena detraibilità dell'Iva sulle locazioni residenziali e riduzione dell'aliquota sugli affitti dal 10% al 5%. A fronte di 650mila famiglie in lista d'attesa per una casa popolare, il piano prevede solo 100mila alloggi in dieci anni (60mila tramite recupero del patrimonio esistente, con appena 16mila euro a unità). Opposizioni (Pd, M5S, Avs) e sindacati degli inquilini (Sunia, Sicet, Uniat, Unione inquilini) bocciano il provvedimento definendolo inadeguato all'emergenza abitativa, privo di nuovi investimenti e aperto a operazioni speculative e processi di privatizzazione del patrimonio pubblico; in parallelo è stato presentato un ddl che velocizza le procedure di sfratto senza strumenti di sostegno ai Comuni per gestire l'emergenza abitativa.",
       "normative": [
-        "Piano Casa 2026 (decreto convertito con voto di fiducia al Senato)",
-        "ddl sfratti (provvedimento collegato)"
+        "Decreto \"Piano casa\" (approvato al Senato con voto di fiducia)",
+        "ddl sfratti (collegato al Piano casa)"
       ],
       "tags": [
         "piano casa",
-        "edilizia popolare",
+        "edilizia residenziale pubblica",
         "canone calmierato",
         "sfratti",
-        "housing sociale"
+        "affitti"
       ]
     },
     {
       "titolo": "A Cala Finanza per sventare l'assalto ai litorali italiani",
       "autore": "Costantino Cossu",
       "fonte": "il manifesto",
-      "data": "02 Lug 2026",
+      "data": "02 lug 2026",
       "pagina": "p. 9",
       "categoria": "urbanistica",
       "badge": "Coste e Zes",
       "rilevanza": "alta",
-      "sintesi": "A Punta la Greca, davanti a Tavolara nel Golfo di Olbia, centinaia di manifestanti hanno protestato contro un progetto turistico-immobiliare del gruppo brasiliano Jsfh (albergo a 5 stelle, trenta ville, campo da golf, eliporto) su un tratto di costa sarda incontaminata, tutelato da un'Area marina protetta e dal Piano paesaggistico regionale del 2006 voluto dall'allora governatore Renato Soru, che vieta cantieri entro 300 metri dal mare. Il governo Meloni ha consentito l'intervento applicando le procedure autorizzative semplificate previste per le Zone economiche speciali (Zes), istituite da una legge del 2017 per le aree economicamente depresse e successivamente estese all'intero Mezzogiorno da una legge del 2024. L'operazione aggira di fatto i vincoli ambientali e paesaggistici nazionali e regionali, facendo leva sul concetto di costruzioni 'reversibili' (strutture amovibili prive di nuove cubature). La presidente della Regione Sardegna Alessandra Todde ha presentato ricorso al Tar, con udienza fissata all'8 luglio, e valuta un successivo ricorso alla Corte costituzionale in caso di esito sfavorevole. Le associazioni ambientaliste (Wwf, Legambiente, Italia Nostra e altre) temono che il caso apra un precedente valido per tutti i litorali del Meridione.",
+      "sintesi": "A Punta la Greca, davanti a Tavolara (Golfo di Olbia), centinaia di persone hanno manifestato contro il progetto del gruppo immobiliare brasiliano Jsfh, che vuole costruire un albergo a 5 stelle, trenta ville, un campo da golf e un eliporto su un tratto di costa incontaminata. L'area rientra in una Area marina protetta a inedificabilità assoluta ed è tutelata dal Piano paesaggistico regionale sardo del 2006 (voluto dall'allora presidente Renato Soru), che vieta cantieri entro 300 metri dal mare. Il governo Meloni ha però consentito di aggirare questi vincoli tramite le procedure di autorizzazione semplificata previste per le Zone economiche speciali (Zes), istituite nel 2017 e nel 2024 estese all'intero Sud Italia come unica grande Zes. La presidente della Regione Sardegna Alessandra Todde ha presentato ricorso al Tar (udienza fissata per l'8 luglio) ed è pronta ad arrivare alla Corte costituzionale; associazioni ambientaliste (Wwf, Legambiente, Italia Nostra, Gruppo di intervento giuridico) temono che il caso apra un precedente valido per l'intero litorale meridionale.",
       "normative": [
-        "L. istitutiva delle Zone economiche speciali (Zes), 2017",
-        "L. di estensione del regime Zes all'intero Mezzogiorno, 2024",
+        "Legge istitutiva delle Zone economiche speciali (Zes), 2017",
+        "Legge 2024 di estensione della Zes all'intero Meridione",
         "Piano paesaggistico regionale della Sardegna (2006)"
       ],
       "tags": [
@@ -525,28 +835,27 @@
         "Zes",
         "urbanistica",
         "tutela paesaggistica",
-        "Sardegna",
-        "abusivismo turistico"
+        "Sardegna"
       ]
     },
     {
       "titolo": "Sovranità del capitale: l'eccezione è norma",
       "autore": "Marco Cremaschi",
       "fonte": "il manifesto",
-      "data": "02 Lug 2026",
+      "data": "02 lug 2026",
       "pagina": "p. 9",
       "categoria": "urbanistica",
-      "badge": "Zes e deroghe",
+      "badge": "Deroghe urbanistiche",
       "rilevanza": "media",
-      "sintesi": "Commento di analisi urbanistica collegato al caso Tavolara/Cala Finanza: l'autore evidenzia come la combinazione tra il concetto giuridico di 'costruzione reversibile' (strutture smontabili giudicate compatibili con la tutela ambientale) e lo strumento delle Zone economiche speciali (Zes) stia trasformando la deroga in regola ordinaria. Nato nel 2009 su proposta dell'economista Paul Romer come strumento eccezionale per territori sottosviluppati, il modello Zes si sarebbe progressivamente mutato da leva di politica industriale a laboratorio di deregolamentazione, con enclave che negoziano regole edilizie e ambientali su misura per gli investitori, sottraendosi ai controlli pubblici ordinari. Il governo Meloni ha esteso il regime Zes a gran parte del Mezzogiorno; secondo l'autore ciò apre la strada a un uso della normativa emergenziale come dispositivo politico permanente per sospendere le regole ordinarie di tutela del territorio a vantaggio del capitale d'investimento, con il rischio che l'eccezione normativa diventi il modo ordinario di governare le coste e il paesaggio italiano.",
+      "sintesi": "Analisi di commento al caso di Cala Finanza, che mette in luce l'incontro tra due istituti giuridici - la nozione di costruzione «reversibile» (strutture smontabili giudicate compatibili con la tutela ambientale) e le Zone economiche speciali - usato dai promotori immobiliari per aggirare la legislazione di tutela delle coste. L'autore ripercorre la genesi delle Zes, proposte nel 2009 dall'economista Paul Romer per aree depresse (modello Shenzhen), e ne denuncia la trasformazione da strumento di politica industriale a dispositivo di deregolamentazione a vantaggio di investitori privati, citando il caso dell'enclave privata Próspera in Honduras. Il rischio, sostiene, è che l'eccezione normativa smetta di rispondere a emergenze reali per diventare modalità ordinaria di governo del territorio, trasformando la sovranità territoriale in un bene negoziabile con chi dispone di capitale, con ricadute dirette sulle competenze urbanistiche e paesaggistiche degli enti locali.",
       "normative": [
-        "Zone economiche speciali (Zes)"
+        "Zone economiche speciali (Zes) - quadro normativo generale"
       ],
       "tags": [
+        "urbanistica",
         "Zes",
         "deregolamentazione",
-        "urbanistica",
-        "coste",
+        "tutela costiera",
         "governo del territorio"
       ]
     },
@@ -554,21 +863,20 @@
       "titolo": "Autonomia, Calderoli sta andando avanti. Nella distrazione di opposizioni e cittadini",
       "autore": "Alighiero Fumagalli",
       "fonte": "il manifesto",
-      "data": "02 Lug 2026",
+      "data": "02 lug 2026",
       "pagina": "p. 11",
       "categoria": "normativa",
       "badge": "Autonomia differenziata",
       "rilevanza": "media",
-      "sintesi": "La riforma dell'autonomia differenziata promossa dal ministro Calderoli prosegue il proprio iter: le Commissioni parlamentari stanno esaminando le intese preliminari sottoscritte dal governo con Piemonte, Liguria, Lombardia e Veneto, con conclusione dello scrutinio prevista entro fine luglio 2026 e possibili aggiustamenti dopo la pausa estiva. Il percorso, avviato con il disegno di legge quadro presentato da Calderoli nel febbraio 2023 e approvato dal Parlamento nel giugno 2024, introdurrà la nuova figura della 'Regione ad autonomia differenziata', un ibrido tra le Regioni a statuto speciale e quelle ordinarie. Il ministro Giorgetti ha escluso il voto anticipato nell'aprile 2027 perché incompatibile con l'iter di approvazione definitiva delle intese. L'articolo segnala il rischio che le future macroregioni del Nord possano dettare proprie regole in settori cruciali come protezione civile e sanità, scaricandone i costi di bilancio sull'intero Paese, in un contesto di scarsa attenzione pubblica e politica al tema, potenzialmente rilevante anche per le future competenze regionali in materia di governo del territorio.",
+      "sintesi": "Aggiornamento sull'iter dell'autonomia differenziata: le Commissioni parlamentari stanno esaminando le intese preliminari sottoscritte dal governo con Piemonte, Liguria, Lombardia e Veneto, con scrutinio da completare entro fine luglio; a inizio 2026 dovrebbe arrivare il disegno di legge definitivo che introdurrebbe la nuova figura della Regione ad autonomia differenziata, un ibrido fra Regioni a statuto speciale e ordinario. L'articolo ricostruisce le tappe del percorso (intese Gentiloni 2018, ddl quadro Calderoli 2023, approvazione parlamentare nel giugno 2024) e riferisce che il ministro Giorgetti ha escluso elezioni anticipate nell'aprile 2027 perché incompatibili con i tempi di approvazione definitiva delle intese, segno che il calendario elettorale si piega ora alle esigenze della riforma. L'autonomia è divenuta merce di scambio nella maggioranza per il consenso della Lega sulla nuova legge elettorale: il rischio evidenziato è una futura macroregione del Nord che detterà regole proprie in materia di protezione civile e sanità, mentre il rispetto dei vincoli di bilancio resterà nazionale.",
       "normative": [
-        "Ddl quadro Calderoli sull'autonomia differenziata (approvato giugno 2024)",
-        "Intese preliminari Stato-Regioni con Piemonte, Liguria, Lombardia e Veneto"
+        "Legge quadro Calderoli sull'autonomia differenziata (approvata giugno 2024)"
       ],
       "tags": [
         "autonomia differenziata",
         "regioni",
-        "competenze territoriali",
-        "Calderoli"
+        "riforma costituzionale",
+        "normativa regionale"
       ]
     },
     {
